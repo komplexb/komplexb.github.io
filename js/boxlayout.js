@@ -11,7 +11,7 @@
 var Boxlayout = (function() {
 
 	var $el = $( '#bl-main' ),
-		$sections = $el.children( 'section' ),
+		$sections = $el.children( 'section:not("#blog")' ),
 		// works section
 		$sectionWork = $( '#bl-work-section' ),
 		// work items

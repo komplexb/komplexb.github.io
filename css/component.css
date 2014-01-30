@@ -94,7 +94,7 @@ ol {
 	background: #10A296;
 }
 
-.bl-box {
+a.bl-box, .bl-box {
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -122,8 +122,10 @@ ol {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    font-size: 100%;
 }
 
+a.bl-box h2, 
 .bl-box h2 {
 	text-align: center;
 	margin: 0;
@@ -161,8 +163,12 @@ ol {
 	content: "\e001";
 }
 
-.bl-icon-blog:before {
+.bl-icon-play:before {
 	content: "\e002";
+}
+
+.bl-icon-blog:before {
+	content: "\e601";
 }
 
 .bl-icon-contact:before {
@@ -511,7 +517,8 @@ section.bl-expand .bl-icon-close {
 
 @media screen and (max-width: 46.5em) {
 	.bl-content,
-	.bl-box {
+	.bl-box
+	, a.bl-box {
 		font-size: 75%;
 	}
 
@@ -519,9 +526,11 @@ section.bl-expand .bl-icon-close {
 		height: 130px;
 	}
 
+	/*
 	.bl-content > ul li {
-		width: 87%;
-	}
+			width: 87%;
+		}
+		*/
 	
 	div.bl-panel-items > div > div {
 		width: 80%;
@@ -536,6 +545,7 @@ section.bl-expand .bl-icon-close {
 	.bl-content > ul li {
 		margin-bottom: 5%;
 		font-size: 100%;
+		width: 87%;
 	}
 	
 	div.bl-panel-items > div > div img {
