@@ -89,7 +89,7 @@ b {
 
 #cover-letter-tabs .tabs-content > .content {
     padding: 0.9375rem;
-    min-height: 18.1rem;
+    min-height: 18.3rem;
 }
 
 /* nav */
@@ -109,9 +109,6 @@ b {
 
 /* desktop/large specific settings */
 @media only screen and (min-width: 40.063em) {
-   /* #main-header {        
-        display: block;
-    }*/
     .tabs-content > .content > h5:first-child {
         display: none; 
     } 
