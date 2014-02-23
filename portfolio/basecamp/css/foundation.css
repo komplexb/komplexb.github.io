@@ -1218,7 +1218,8 @@ meta.foundation-mq-topbar {
     .top-bar:after {
       clear: both; }
     .top-bar .toggle-topbar {
-      display: none; }
+      display: none; 
+    }
     .top-bar .title-area {
       float: left; }
     .top-bar .name h1 a {

@@ -137,6 +137,7 @@
         .off('.topbar')
         .on('click.fndtn.topbar', '[' + this.attr_name() + '] .toggle-topbar', function (e) {
           e.preventDefault();
+          fixTopBar(); //fix topbar width when menu is clicked
           self.toggle(this);
         })
         .on('click.fndtn.topbar', '[' + this.attr_name() + '] li.has-dropdown', function (e) {
@@ -366,6 +367,7 @@
             if (!self.S(klass).hasClass('fixed')) {
               self.S(klass).addClass('fixed');
               self.S('body').addClass('f-topbar-fixed');
+                fixTopBar();
             }
           } else if ($window.scrollTop() <= distance) {
             if (self.S(klass).hasClass('fixed')) {
