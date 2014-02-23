@@ -1,0 +1,170 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700|Exo+2:400,700);
+/* colors */
+.bg-color-teal {
+    background-color: #3E6A74;
+}
+.bg-color-spindrift {
+    background-color: #38BFB3;
+}    
+.bg-color-honeydew {
+    background-color: #99DB3B;
+}
+.bg-color-cantaloupe {
+    background-color: #F4AD2F;
+}
+.bg-color-tangerine {
+    background-color: #F56544;
+}    
+.color-tangerine {
+    color: #F56544;
+}
+.color-cantaloupe {
+    color: #F4AD2F;
+}
+.color-honeydew {
+    color: #99DB3B;
+}
+.color-spindrift {
+    color: #38BFB3;
+}
+.color-teal {
+    color: #3E6A74;
+}
+
+/* typography */
+b {
+    font-weight: 700;
+}
+.story-quotes:before, .story-quotes:after {
+    color:#33a8e5;
+    font-size:6rem;
+    vertical-align:middle;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.story-quotes:before {
+    content:'“';
+    /*margin:1em -.15em 1em -.15em;*/	
+	/*padding:.15em .5em .5em .5em;*/	
+	/*line-height:12px;*/	
+}
+.story-quotes:after {
+    content:'”';
+    display:block;
+	text-align:right;	
+	margin:0 0 -4rem 0;	
+	/*padding:.25em .10em .75em 0;*/	
+}
+
+.story-quotes {    
+	margin: 0.5rem 1rem 1rem 1rem;
+	width: 90%;    
+}
+
+.story-quotes p {
+    margin:0;
+	padding:0;
+    text-align: justify;
+}
+
+.story-quotes p:first-child {
+    margin-top: -3rem;
+}
+
+.story-quotes > blockquote {
+    margin-left: 1rem;   
+}
+
+/* tabs */
+#cover-letter-tabs .tabs-content
+, #resume-tabs .tabs-content {
+    overflow-x: hidden;   
+}
+#cover-letter-tabs .tabs-content, #resume-tabs .tabs-content {
+    max-height: 18.3rem;    
+}
+
+#cover-letter-tabs .tabs-content.vertical > .content {
+    padding: 0.9375rem;
+    height: inherit;
+}
+/* only show this title when printing */
+.tabs-content > .content > h5:first-child {
+    display: block;
+}
+
+#main-header {
+    /*border-bottom: 1px solid white;*/
+    /*display: none;*/
+}
+
+/* nav */
+#main-nav[data-magellan-expedition] {
+    background: #307A9A;
+    padding: 0;
+    /*min-width: 51%;*/
+}
+
+#sticky-nav .sub-nav dd {
+    margin-left: 0;
+}
+
+#sticky-nav .sub-nav dd a {
+    color: white;
+    background-color: black;
+}
+
+/* desktop/large specific settings */
+@media only screen and (min-width: 40.063em) {
+   /* #main-header {        
+        display: block;
+    }*/
+    .tabs-content > .content > h5:first-child {
+        display: none; 
+    }
+    #cover-letter-tabs .tabs-content  {
+        height: 18.3rem;    
+    }
+    #resume-tabs .tabs-content {
+        max-height: 34rem;    
+    }
+}
+
+/* chrome only "really its webkit" */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #cover-letter-tabs .tabs-content.vertical {
+        height: 18.1rem;    
+    }
+}
+
+/* printing */
+.for-printing {
+    display: none;
+}
+
+@media print {
+    .for-printing {
+        display: block;
+    }
+    #main-header
+    , .tabs {
+        display: none;
+    }    
+    .tabs-content > .content
+    , .tabs-content > .content > h5 {
+        display: block; 
+    }
+    .tabs-content > .content
+    , #cover-letter-tabs .tabs-content
+    , #resume-tabs .tabs-content {
+        height: auto;
+    }
+    h1 {
+        color: red;
+    }
+    h3 {
+        
+    }
+    h5 {
+        
+    }
+}
