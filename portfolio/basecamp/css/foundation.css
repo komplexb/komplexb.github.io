@@ -2407,12 +2407,9 @@ div.switch {
     color: white;
   }
   .tabs-content > .content a {
-    color: #9F3016;
-  }
-  .tabs-content > .content a:hover
-    ,  .tabs-content > .content a:focus {
-        color: #104B64;
-    }
+    color: #104B64;
+    font-weight: 700;
+  }  
     .tabs-content > .content.active {
       display: block; }
     .tabs-content > .content.contained {

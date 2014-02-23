@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Slab:700|Exo+2:400,700);
 /* colors */
 .bg-color-teal {
-    background-color: #3E6A74;
+    background-color: #307A9A;
 }
 .bg-color-spindrift {
     background-color: #38BFB3;
@@ -28,7 +28,7 @@
     color: #38BFB3;
 }
 .color-teal {
-    color: #3E6A74;
+    color: #307A9A;
 }
 
 /* typography */
@@ -57,7 +57,7 @@ b {
 
 .story-quotes {    
 	margin: 0.5rem 1rem 1rem 1rem;
-	width: 90%;    
+	padding: 0 2%;    
 }
 
 .story-quotes p {
@@ -78,30 +78,24 @@ b {
 #cover-letter-tabs .tabs-content
 , #resume-tabs .tabs-content {
     overflow-x: hidden;   
-}
-#cover-letter-tabs .tabs-content, #resume-tabs .tabs-content {
-    max-height: 18.3rem;    
+    max-height: 18.3rem;
 }
 
-#cover-letter-tabs .tabs-content.vertical > .content {
+#cover-letter-tabs .tabs-content blockquote 
+, #resume-tabs .tabs-content blockquote {
+    color: inherit;
+    font-weight: 700;
+}
+
+#cover-letter-tabs .tabs-content > .content {
     padding: 0.9375rem;
-    height: inherit;
-}
-/* only show this title when printing */
-.tabs-content > .content > h5:first-child {
-    display: block;
-}
-
-#main-header {
-    /*border-bottom: 1px solid white;*/
-    /*display: none;*/
+    min-height: 18.1rem;
 }
 
 /* nav */
 #main-nav[data-magellan-expedition] {
     background: #307A9A;
     padding: 0;
-    /*min-width: 51%;*/
 }
 
 #sticky-nav .sub-nav dd {
@@ -120,19 +114,22 @@ b {
     }*/
     .tabs-content > .content > h5:first-child {
         display: none; 
-    }
-    #cover-letter-tabs .tabs-content  {
-        height: 18.3rem;    
+    } 
+     #cover-letter-tabs .tabs-content  {
+        max-height: 18.3rem;    
     }
     #resume-tabs .tabs-content {
         max-height: 34rem;    
-    }
+    }   
 }
 
 /* chrome only "really its webkit" */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    #cover-letter-tabs .tabs-content.vertical {
-        height: 18.1rem;    
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-width: 40.063em) {
+    #cover-letter-tabs .tabs-content {
+        height: 18.1rem;   
+    }
+    #cover-letter-tabs .tabs-content > .content {       
+        min-height: 18.1rem;
     }
 }
 
@@ -142,8 +139,14 @@ b {
 }
 
 @media print {
+    .tabs-content > .content > h5:first-child {
+        display: block;
+    }
     .for-printing {
         display: block;
+    }
+    .dont-print {
+        display: none;   
     }
     #main-header
     , .tabs {
@@ -157,6 +160,8 @@ b {
     , #cover-letter-tabs .tabs-content
     , #resume-tabs .tabs-content {
         height: auto;
+        max-height: none;
+        overflow-x: auto;
     }
     h1 {
         color: red;
