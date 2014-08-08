@@ -1,0 +1,41 @@
+h3 {
+  @extend %small-bold;
+  color: $accent;
+  text-align: center;
+}
+
+.face-lockup {
+  max-width: 780px;
+  @include display (flex); //bourbon mixin
+  margin: 0 auto;
+  @include align-items(center);
+  @include justify-content(space-around);
+  
+  .face-img {
+    @include size(200px);
+    border-radius: 50%; //make the image round
+    background: url(/assets/img/face.jpg) center center;
+    background-size: cover;
+    order: 3;
+  }
+  
+  [class^="icon-"] {
+    @include size(100px);
+    background-color: $bgcolor;
+    //border-radius: 50%; //round
+    border-radius: 5px;
+    
+    &.icon-pencil {
+      order: 1;
+    }
+    &.icon-mouse {
+      order: 2;
+    }
+    &.icon-browser {
+      order: 4;
+    }
+    &.icon-pencil {
+      order: 5;
+    }
+  }
+}
