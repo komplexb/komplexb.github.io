@@ -1,7 +1,9 @@
 h3 {
-  @extend %small-bold;
-  color: $accent;
-  text-align: center;
+    @extend %small-bold;
+    color: $accent-light;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
 }
 
 .face-lockup {
@@ -24,6 +26,10 @@ h3 {
     background-color: $bgcolor;
     //border-radius: 50%; //round
     border-radius: 5px;
+      
+    path {
+        fill: $accent    
+    }
     
     &.icon-pencil {
       order: 1;
@@ -34,8 +40,93 @@ h3 {
     &.icon-browser {
       order: 4;
     }
-    &.icon-pencil {
+    &.icon-video {
       order: 5;
     }
   }
+}
+
+@media screen and (max-width: 650px) {
+    .face-lockup {
+        display: block;
+        text-align: center;
+        
+        div {
+            display: inline-block;
+        }
+        
+        .face-img {
+            display: block;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0 auto 30px auto;
+        }
+
+        [class^="icon-"] {
+            margin: 10px;   
+        }        
+    }
+}
+
+.blurb {
+    max-width: 620px;
+    padding: 0 15px;
+    margin: 50px auto 50px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.skill-lockup {
+    max-width: 540px;
+    margin: 100px auto;
+    color: #999;
+    @include clearfix;
+    
+    .skill-unit {
+        width: 270px;
+        float: left;
+    }
+    
+    .skill-icons {
+        font-size: 0; //fixes inline-block spacing bug
+        margin: 0px 0 30px;
+        
+        span {
+            display: inline-block;
+            @include size(14px);
+            background-color: $accent;
+            margin-right: 5px;
+            border-radius: 2px;
+            
+            &:after {
+                content: '';
+                display: block;
+                @include size(10px);
+                background: #fff;
+                border-radius: 2px;
+                margin: 2px;
+            }
+        }
+        
+        @for $i from 1 through 10 {
+          &.skill-#{$i} span:nth-child(n+#{$i+1})
+            { 
+                @extend %skill-color;
+            }
+        }
+    }
+}
+
+%skill-color {
+    background: $bgcolor;
+}
+
+@media screen and (max-width: 541px) {
+    .skill-lockup {
+        width: 220px;
+        
+        .skill-unit {
+            width: 220px;
+        }
+    }
 }
