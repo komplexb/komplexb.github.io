@@ -1,23 +1,13 @@
 footer {
-  background: url(../img/hero-bg.jpg) center center;
-  background-size: cover;
-  
+    @extend %bg-img;
+    
   .lockup {
     padding: 50px 30px;
     @include clearfix;
       
-      .logo {
-        @include size(50px); //bourbon mixin
-        float: left;
-        margin-right: 30px;
-        
-        path {
-          fill: rgba(0,0,0,0.5);
-        }
-      }
-      
       .content-wrap {
         float: left;
+        margin-left: 80px;  
         
         .copyright {
           margin: 0;

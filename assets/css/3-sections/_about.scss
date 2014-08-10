@@ -1,22 +1,14 @@
-h3 {
-    @extend %small-bold;
-    color: $accent-light;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 30px;
-}
-
 .face-lockup {
   max-width: 780px;
   @include display (flex); //bourbon mixin
   margin: 0 auto;
   @include align-items(center);
-  @include justify-content(space-around);
+  @include justify-content(space-between);
   
   .face-img {
     @include size(200px);
     border-radius: 50%; //make the image round
-    background: url(/assets/img/face.jpg) center center;
+    background-position: center center;
     background-size: cover;
     order: 3;
   }
@@ -32,16 +24,16 @@ h3 {
     }
     
     &.icon-pencil {
-      order: 1;
+      @include order(1); //bourbon mixin
     }
     &.icon-mouse {
-      order: 2;
+      @include order(2);
     }
     &.icon-browser {
-      order: 4;
+      @include order(4);
     }
     &.icon-video {
-      order: 5;
+      @include order(5);
     }
   }
 }
