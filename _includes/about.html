@@ -1,9 +1,9 @@
-<section>
+<section> 
 	<h3 id="about-me">About Myself</h3>
 	
 	<div class="face-lockup">
 		
-		<div class="face-img" style="background-image: url(/assets/img/{{ site.avatar }});"></div>
+		<div class="face-img" style="background-image: url(/assets/img/{{ site.data.settings.avatar }});"></div>
 		
 		<div class="icon-pencil">{% include icons/icon-pencil.html %}</div>
 		<div class="icon-mouse">{% include icons/icon-mouse.html %}</div>
@@ -13,7 +13,7 @@
 	</div>
 	
     <div class="blurb">
-        {{ site.blurb }}
+        {{ site.data.settings.blurb }}
     </div>
 	
 	<div class="skill-lockup">

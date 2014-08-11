@@ -1,7 +1,4 @@
 # Site settings
-title: Byron Buckley
-email: hello@byronbuckley.com
-#description: Front-end // Interaction Design // Photography
 baseurl: ""
 url: "http://yourdomain.com"
 twitter_username: jekyllrb
@@ -14,12 +11,3 @@ permalink: pretty
 sass:
     sass_dir: /assets/css
     style: :expanded 
-
-# site default images and content
-
-bg-header: hero-bg.jpg
-bg-footer: hero-3.jpg
-logo: logo.svg
-avatar: face.jpg
-
-blurb: <p><strong>Phasellus fringilla faucibus augue, eu sodales nisl accumsan non.</strong>Etiam gravida aliquet luctus. Mauris id accumsan nisl. Ut varius erat lacus, eu faucibus eros dapibus sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris elementum dolor urna, at scelerisque neque laoreet id. Etiam placerat risus viverra lectus eleifend pharetra. Proin tincidunt metus dui, nec vestibulum massa pretium id. Mauris nulla sem, iaculis eget enim eget, aliquam aliquet velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus at fringilla dui. Mauris eu leo nisi.</p>
