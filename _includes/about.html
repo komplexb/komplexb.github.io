@@ -1,142 +1,41 @@
-<section> 
-	<h3 id="about-me">About Myself</h3>
-	
-	<div class="face-lockup">
-		
-		<div class="face-img" style="background-image: url(/assets/img/{{ site.data.settings.avatar }});"></div>
-		
-		<div class="icon-pencil">{% include icons/icon-pencil.html %}</div>
-		<div class="icon-mouse">{% include icons/icon-mouse.html %}</div>
-		<div class="icon-browser">{% include icons/icon-browser.html %}</div>
-		<div class="icon-video">{% include icons/icon-video.html %}</div>
-		
-	</div>
-	
-    <div class="blurb">
-        {{ site.data.settings.blurb }}
-    </div>
-	
-	<div class="skill-lockup">
-		<div class="skill-unit">
-            <div class="skill-label">Reading</div>
-            <div class="skill-icons skill-9">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+<section>
+
+  <h3 id="about-me">About Myself</h3>
+  
+  <div class="face-lockup">
+    
+    <div class="face-img"></div>
+    
+    <div class="icon-pencil">{% include icons/icon-pencil.html %}</div>
+    <div class="icon-mouse">{% include icons/icon-mouse.html %}</div>
+    <div class="icon-browser">{% include icons/icon-browser.html %}</div>
+    <div class="icon-video">{% include icons/icon-video.html %}</div>
+    
+  </div>
+  
+  
+  <div class="blurb">
+    {{ site.data.settings.blurb }}
+  </div>
+  
+  {% if site.data.settings.skills %}
+  
+  <div class="skill-lockup">
+
+    {% for skill in site.data.settings.skills %}
+
+      <div class="skill-unit">
+        <div class="skill-label">{{ skill.name }}</div>
+        <div class="skill-icons skill-{{ skill.value }}">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
         </div>
-        <div class="skill-unit">
-            <div class="skill-label">Ritin'</div>
-            <div class="skill-icons skill-10">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="skill-unit">
-            <div class="skill-label">'Rithmetic</div>
-            <div class="skill-icons skill-9">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="skill-unit">
-            <div class="skill-label">Skill #1</div>
-            <div class="skill-icons skill-8">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="skill-unit">
-            <div class="skill-label">Skill #2</div>
-            <div class="skill-icons skill-7">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="skill-unit">
-            <div class="skill-label">Skill #3</div>
-            <div class="skill-icons skill-6">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="skill-unit">
-            <div class="skill-label">Skill #4</div>
-            <div class="skill-icons skill-5">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="skill-unit">
-            <div class="skill-label">Skill #5</div>
-            <div class="skill-icons skill-8">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-	</div>
-	
+      </div>    
+
+    {% endfor %}
+    
+  </div>
+  
+  {% endif %}
+
 </section>

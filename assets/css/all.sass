@@ -1,0 +1,41 @@
+---
+---
+
+///////////////////////  --
+//                   //  ----
+//      SETTINGS     //  ------
+//                   //  ----
+///////////////////////  --
+
+//------------------------------------------------
+// Transition the image paths from the settings file to usable SASS variables
+
+$logo-path: '{{ site.data.settings.logo }}'
+$bg-header-path: '{{ site.data.settings.bg-header }}'
+$bg-footer-path: '{{ site.data.settings.bg-footer }}'
+$avatar-path: '{{ site.data.settings.avatar }}'
+
+    
+//------------------------------------------------
+// Set some colors as sass variables     
+$accent: #c99065
+$accent-light: #e1c184
+$bgcolor: #e5eaee   
+
+$primary-color: #F6C
+$text-color: #2E2D33
+$accent-color: #BD5248
+$bg-color: #F6F6F8
+$link-color: $accent
+$selection-color: #FFF498    
+    
+///////////////////////////  --
+//                       //  ----
+//      SASS IMPORTS     //  ------
+//                       //  ----
+///////////////////////////  --
+@import '1-tools/-tools-index'
+@import '2-base/-base-index'
+@import '3-modules/-modules-index'
+@import '4-pages/-pages-index'
+@import '3-sections/-sections-dir'
