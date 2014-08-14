@@ -6,8 +6,8 @@ $( document ).ready(function() {
 
 $(function() {
 	smoothScrool(300);
-	workBelt();
-	workLoad();
+//	workBelt();
+//	workLoad();
 });
 
 

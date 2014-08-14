@@ -31,8 +31,8 @@ blurb: <p><strong>Phasellus fringilla faucibus augue, eu sodales nisl accumsan n
 
 skills:
 - {name: Reading, value: '9'}
-- {name: Riting, value: '7'}
-- {name: Rithmetic, value: '10'}
+- {name: "Writin'", value: '7'}
+- {name: "'rithmetic", value: '10'}
 - {name: Skill 1, value: '6'}
 - {name: Skill 2, value: '7'}
 - {name: IxD, value: '5'}
