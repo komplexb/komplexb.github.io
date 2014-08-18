@@ -5,13 +5,13 @@ $( document ).ready(function() {
 });
 
 $(function() {
-	smoothScrool(300);
-//	workBelt();
+	smoothScroll(300);
+	workBelt();
 //	workLoad();
 });
 
 
-function smoothScrool (duration) {
+function smoothScroll (duration) {
 	$('a[href^="#"]').on('click', function(event) {
 
 	    var target = $( $(this).attr('href') );
@@ -23,4 +23,16 @@ function smoothScrool (duration) {
 	        }, duration);
 	    }
 	});
+}
+
+function workBelt() {
+    $('.thumb-unit').click(function() {
+        $('.work-belt').css('left','-100%');
+        $('.work-container').show();
+    });
+
+    $('.work-return').click(function() {
+        $('.work-belt').css('left','0%');
+        $('.work-container').hide(800);
+    });
 }
