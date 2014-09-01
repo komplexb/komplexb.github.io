@@ -43,11 +43,11 @@ skills:
 # Work Section
 
 projects:
-- {name: TYPO International Design Talks, folder: 'proj-1'}
-- {name: City-IN website concept, folder: 'proj-2'}
-- {name: Crispy Icons, folder: 'proj-3'}
-- {name: Flat Mobile UI/UX Concept, folder: 'proj-4'}
-- {name: Fresh It Up, folder: 'proj-5'}
-- {name: Timeline Page, folder: 'proj-6'}
-- {name: Weather Dashboard, folder: 'proj-7'}
-- {name: Stripes & Co, folder: 'proj-8'}
+- {name: TYPO International Design Talks, folder: 'proj-1', file: 'work/proj-1.md'}
+- {name: City-IN website concept, folder: 'proj-2', file: 'work/proj-2.md'}
+- {name: Crispy Icons, folder: 'proj-3', file: 'work/proj-3.md'}
+- {name: Flat Mobile UI/UX Concept, folder: 'proj-4', file: 'work/proj-4.md'}
+- {name: Fresh It Up, folder: 'proj-5', file: 'work/proj-5.md'}
+- {name: Timeline Page, folder: 'proj-6', file: 'work/proj-6.md'}
+- {name: Weather Dashboard, folder: 'proj-7', file: 'work/proj-7.md'}
+- {name: Stripes & Co, folder: 'proj-8', file: 'work/proj-8.md'}
