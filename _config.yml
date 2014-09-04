@@ -6,8 +6,6 @@ sass:
     sass_dir: /assets/css
     style: :expanded 
     
-jekyll-version: 2.0.3
-
 highlighter: rouge
 
 encoding: utf-8
