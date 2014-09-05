@@ -10,10 +10,10 @@
 //------------------------------------------------
 // Transition the image paths from the settings file to usable SASS variables
 
-$logo-path: '{{ site.data.settings.logo }}'
-$bg-header-path: '{{ site.data.settings.bg-header }}'
-$bg-footer-path: '{{ site.data.settings.bg-footer }}'
-$avatar-path: '{{ site.data.settings.avatar }}'
+$logo-path: 'logo.svg'
+$bg-header-path: 'hero-bg.jpg'
+$bg-footer-path: 'hero-3.jpg'
+$avatar-path: 'face.jpg'
 
     
 //------------------------------------------------
@@ -35,8 +35,6 @@ $selection-color: #FFF498
 //                       //  ----
 ///////////////////////////  --
 @import '1-tools/-tools-index'
-//@import 'bourbon/bourbon'
 @import '2-base/-base-index'
-@import '3-modules/-modules-index'
-@import '4-pages/-pages-index'
 @import '3-sections/-sections-dir'
+@import '4-pages/-pages-index'

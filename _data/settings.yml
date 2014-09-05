@@ -10,11 +10,11 @@ title: Byron Buckley
 email: hello@byronbuckley.com
 description: Front-end // Interaction Design // Photography
 
-# site default images and content
+# site default images and content are defined in all.sass
 
-bg-header: hero-bg.jpg
-bg-footer: hero-3.jpg
-logo: logo.svg
+#bg-header: hero-bg.jpg
+#bg-footer: hero-3.jpg
+#logo: logo.svg
 
 menu:
 - {name: About Me, url: '#about-me'}
@@ -25,7 +25,7 @@ menu:
 #-------------------------------
 # About Section
 
-avatar: face.jpg
+#avatar: face.jpg # now defined in all.sass
 
 blurb: <p><strong>Phasellus fringilla faucibus augue, eu sodales nisl accumsan non.</strong>Etiam gravida aliquet luctus. Mauris id accumsan nisl. Ut varius erat lacus, eu faucibus eros dapibus sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris elementum dolor urna, at scelerisque neque laoreet id. Etiam placerat risus viverra lectus eleifend pharetra. Proin tincidunt metus dui, nec vestibulum massa pretium id. Mauris nulla sem, iaculis eget enim eget, aliquam aliquet velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus at fringilla dui. Mauris eu leo nisi.</p>
 

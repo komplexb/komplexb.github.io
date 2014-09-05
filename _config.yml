@@ -9,3 +9,5 @@ sass:
 highlighter: rouge
 
 encoding: utf-8
+
+exclude: [Gemfile, Gemfile.lock]
