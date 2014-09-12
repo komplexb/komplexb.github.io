@@ -7,8 +7,16 @@
     
     .client-unit {
         max-width: 800px;
-        margin: 0 auto 50px;
-        @include display(flex);
+        margin: 0 0 50px -400px;
+		z-index: 1;
+		@include position(absolute, 0px null null 50%);
+		display: none;
+//		@extend %animationstart_#{$animation};
+		
+		&.active-client {
+			@include display(flex);
+			@extend %#{$animation};
+		}
         
         .client-face {
             min-width: 300px;    
@@ -49,8 +57,8 @@
 
 .client-logos {
 	position: relative;
-	max-width: 750px;
-	margin: 0 auto 100px;
+	max-width: 800px;
+	margin: 350px auto 100px;
 	@include display(flex);
 	@include align-items(space-around);
 	@include justify-content(center);
@@ -62,13 +70,13 @@
 		cursor: pointer;
 		margin: 0 20px;
 		background: {
-			image: url(/assets/img/clients/logo1.png);
 			size: contain;
 			repeat: no-repeat;
+			position: center bottom;
 		}
 		
 		&.active-client {
-			box-shadow: 0px 4px 0px $accent;
+			box-shadow: 0px 10px 0px $bg-color, 0px 14px 0px $accent;
 		}
 	}
 }
@@ -86,12 +94,16 @@
 
 .client-controls {
 	@include position(absolute, 0px 0px 0px 0px);
-	width: 100%;
+//	z-index: 2;
 	
 	> div {
 		@include size(40px);
 		margin-top: -20px;
 		cursor: pointer
+	}
+	
+	path {
+      fill: $accent
 	}
 	
 	.client-control-next {

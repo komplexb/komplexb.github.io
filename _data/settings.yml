@@ -51,3 +51,29 @@ projects:
 - {name: Timeline Page, folder: 'proj-6', file: 'work/proj-6.md'}
 - {name: Weather Dashboard, folder: 'proj-7', file: 'work/proj-7.md'}
 - {name: Stripes & Co, folder: 'proj-8', file: 'work/proj-8.md'}
+
+#-------------------------------
+# Client Section
+
+clients:
+clients:
+- {avatar: 'face-aaroni.jpg',
+  name: 'Scott Summers',
+  title: 'Director of Design, OnToText Ind.',
+  quote: '<p><strong>Mandaremus varias doctrina nam nescius ita ingeniis.</strong> A esse ingeniis, hic minim relinqueret. Dolore expetendis despicationes, appellat tamen legam aliquip fore.</p>',
+  logo: 'logo1.png'}
+- {avatar: 'face-atariboy.jpg',
+  name: 'Hank McCoy',
+  title: 'Eater of Salad, Antartica Int.',
+  quote: '<p><strong>WDolor aut admodum ita labore, e magna iis legam.</strong> Offendit malis quis ea fugiat quo e ingeniis ab eiusmod. Et lorem ullamco, eu esse do cillum.</p>',
+  logo: 'logo2.png'}
+- {avatar: 'face-jackiesaik.jpg',
+  name: 'Stacy Lang',
+  title: 'Social Media Girl, Quebec Int.',
+  quote: '<p><strong>Yea, I guess hes good at computers or something,</strong> but let me ask you this: If a cat always lands on its feet, and buttered bread always lands butter side down, what would happen if you tied buttered bread on top of a cat?</p>',
+  logo: 'logo3.png'}
+- {avatar: 'face-teleject.jpg',
+  name: 'Cleatus Cassidy',
+  title: 'VP of Helmut, Lorem Sorem LLC.',
+  quote: '<p><strong>Litteris quem et nescius concursionibus.</strong> Sed hic illum expetendis o incididunt dolore laboris. Est o magna excepteur ea te varias commodo occaecat.</p>',
+  logo: 'logo4.png'}
