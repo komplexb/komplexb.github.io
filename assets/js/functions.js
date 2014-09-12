@@ -54,7 +54,7 @@ function workLoad() {
 
 function clientStuff() {
 	
-	$('.client-logo').click(function() {
+	$('.client-logo, .clients-mobile-nav span').click(function() {
 		var $this = $(this),
 			$siblings = $this.parent().children(),
 			position = $siblings.index($this);
