@@ -11,4 +11,4 @@ highlighter: rouge
 
 encoding: utf-8
 
-exclude: [Gemfile, Gemfile.lock]
+exclude: ['Gemfile', 'Gemfile.lock', 'the_design.psd']

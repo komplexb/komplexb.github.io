@@ -20,11 +20,13 @@
 		{% else %}
 			<div class="client-unit">
 		{% endif %}
-            <div class="client-face">
-                <img src="assets/img/clients/{{client.avatar}}" alt="client-face">
-                <strong class="client-name">{{client.name}}</strong>
-                <em class="client-title">{{client.title}}</em>
-            </div>
+            <figure class="client-face">
+				<img src="assets/img/clients/{{ client.avatar }}" alt="client-face">
+				<figcaption>
+				  <strong class="client-name">{{ client.name }}</strong>
+				  <em class="client-title">{{ client.title }}</em>
+				</figcaption>
+			</figure>
             <div class="client-content">
 				<div class="client-quote-mark">{% include icons/icon-quote-mark.html %}</div>
 				{{client.quote}}
