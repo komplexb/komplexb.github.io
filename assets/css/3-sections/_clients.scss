@@ -6,7 +6,7 @@
     position: relative;
     
     .client-unit {
-        max-width: 800px;
+        max-width: 750px;
         margin: 50px auto;
 		position: relative;
 		z-index: 1;
@@ -45,7 +45,7 @@
         .client-content {
             font: {
 				size: 18px;
-				weight: 300px;
+				weight: 300;
 			}
 			line-height: 36px;
 			margin-top: -10px;
@@ -56,8 +56,8 @@
 
 .client-logos {
 	position: relative;
-	max-width: 800px;
-	margin: 50px auto 100px;
+	max-width: 750px;
+	margin: 0px auto 100px;
 	@include display(flex);
 	@include align-items(flex-end);
 	@include justify-content(space-around);
@@ -65,8 +65,8 @@
 	
 	.client-logo {
 		cursor: pointer;
-		margin: 0 20px;
-		padding-bottom: 10px;
+		margin: 0 20px 20px;
+		padding-bottom: 20px;
 		border-bottom: 4px solid transparent;
 		opacity: 0.5;
 		
@@ -78,28 +78,26 @@
 }
 
 .client-quote-mark {
-	@include position(absolute, -20px null null -18px);
+	@include position(absolute, -18px null null -15px);
 	@include size(60px);
 	z-index: -1;
+	opacity: 0.3;
 		
 	path {
 		fill: $accent;
-		opacity: 0.3;
 	}
 }
 
 .client-controls {
 	@include position(absolute, 0px 0px 0px 0px);
-//	z-index: 2;
+	z-index: 2;
 	
 	> div {
-		@include size(40px);
+		color: $accent;
+		font-weight: 100;
+		font-size: 50px;
 		margin-top: -20px;
 		cursor: pointer
-	}
-	
-	path {
-      fill: $accent
 	}
 	
 	.client-control-next {
@@ -113,15 +111,17 @@
 
 .clients-mobile-nav {
 	text-align: center;
+	position: relative;
+	z-index: 2;
 	display: none;
 	
 	span {
-		cursor: pointer;
 		display: inline-block;
 		@include size(16px);
 		border-radius: 50%;
 		border: solid 2px $bgcolor;
 		margin: 0px 10px;
+		cursor: pointer;
 		
 		&.active-client {
 			border-color: $accent;
@@ -135,6 +135,7 @@
 	}
 	
 	.clients-belt {
+		overflow-x: hidden;
 		.client-unit.active-client {
 			display: block;
 			position: relative;
@@ -142,7 +143,7 @@
 			left: auto;
 			
 			.client-face {
-				margin-bottom: 20px;
+				margin-bottom: 30px;
 			}
 			
 			.client-content {
@@ -152,9 +153,13 @@
 			}
 			
 			.client-quote-mark {
-				left: 15px;
+				left: 6px;
 			}
 		}
+	}
+	
+	.client-controls {
+		display: none;
 	}
 	
 	.client-logos {
