@@ -77,3 +77,13 @@ clients:
   title: 'VP of Helmut, Lorem Sorem LLC.',
   quote: '<p><strong>Litteris quem et nescius concursionibus.</strong> Sed hic illum expetendis o incididunt dolore laboris. Est o magna excepteur ea te varias commodo occaecat.</p>',
   logo: 'logo4.png'}
+  
+#-------------------------------
+# Contact Section
+
+social:
+- {icon: 'twitter', link: 'http://twitter.com/komplexb', title: 'Check me out on Twidder!'}
+- {icon: 'github', link: 'http://github.com/komplexb', title: 'Byron on GitHub'}
+- {icon: 'linkedin', link: 'http://linkedin.com/byronbuckley', title: 'Byron on LinkedIn'}
+- {icon: 'flickr', link: 'photos.byronbuckley.com', title: 'My Photography'}
+- {icon: 'instagram', link: 'http://instagram.com/komplexb', title: 'Follow me on IG!'}
