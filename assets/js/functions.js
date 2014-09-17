@@ -9,6 +9,8 @@ $(function() {
 	workBelt();
 	workLoad();
 	clientStuff();
+	
+	$("header h1, .biglink").fitText(1.2, { minFontSize: '20px', maxFontSize: '72px' })
 });
 
 
