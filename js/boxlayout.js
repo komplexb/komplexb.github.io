@@ -60,7 +60,7 @@ var Boxlayout = (function() {
 					// set browser chrome to the background color of current section
 					// only works with chrome on lollipop as far as I know
 					var bgColor = $section.css('background-color');
-					$themeColor.attr('content', bgColor);
+					$themeColor.attr('content', bgColor); 
 
 				}
 
