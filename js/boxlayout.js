@@ -8,6 +8,8 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
+var $themeColor = $('meta[name="theme-color"]');
+var bodyColor = $('body').css("color");
 var Boxlayout = (function() {
 
 	var $el = $( '#bl-main' ),
@@ -50,10 +52,16 @@ var Boxlayout = (function() {
 
 			// expand the clicked section and scale down the others
 			$section.on( 'click', function() {
-
+				
 				if( !$section.data( 'open' ) ) {
 					$section.data( 'open', true ).addClass( 'bl-expand bl-expand-top' );
 					$el.addClass( 'bl-expand-item' );	
+					
+					// set browser chrome to the background color of current section
+					// only works with chrome on lollipop as far as I know
+					var bgColor = $section.css('background-color');
+					$themeColor.attr('content', bgColor); 
+
 				}
 
 			} ).find( 'span.bl-icon-close' ).on( 'click', function() {
@@ -62,7 +70,8 @@ var Boxlayout = (function() {
 				$section.data( 'open', false ).removeClass( 'bl-expand' ).on( transEndEventName, function( event ) {
 					if( !$( event.target ).is( 'section' ) ) return false;
 					$( this ).off( transEndEventName ).removeClass( 'bl-expand-top' );
-				} );
+					$themeColor.attr('content', bodyColor);
+				});
 
 				if( !supportTransitions ) {
 					$section.removeClass( 'bl-expand-top' );
@@ -88,6 +97,9 @@ var Boxlayout = (function() {
 			var $panel = $workPanelsContainer.find("[data-panel='" + $( this ).data( 'panel' ) + "']");
 			currentWorkPanel = $panel.index();
 			$panel.addClass( 'bl-show-work' );
+			
+			var bgColor = $panel.css('background-color');
+			$themeColor.attr('content',bgColor);
 
 			return false;
 
@@ -130,12 +142,17 @@ var Boxlayout = (function() {
 			$workPanelsContainer.removeClass( 'bl-panel-items-show' );
 			$workPanels.eq( currentWorkPanel ).removeClass( 'bl-show-work' );
 			
+			
+			var bgColor = $sectionWork.css('background-color');
+			$themeColor.attr('content', bgColor);
+			
 			return false;
 
 		} );
 		
 		$('span.bl-icon-home').on('click', function(e) {		
 			$('span.bl-icon-close').click(); 			
+			$themeColor.attr('content', bodyColor);
 		});
 
 	}

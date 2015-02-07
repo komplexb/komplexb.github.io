@@ -16,7 +16,6 @@ body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
 *,
 *:after,
 *:before {
-	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
@@ -77,25 +76,25 @@ sup {
 .bl-main > section:first-child {
 	top: 0;
 	left: 0;
-	background: #F06060;
+	background-color: #F06060;
 }
 
 .bl-main > section:nth-child(2) {
 	top: 0;
 	left: 50%;
-	background: #FA987D;
+	background-color: #FA987D;
 }
 
 .bl-main > section:nth-child(3) {
 	top: 50%;
 	left: 0;
-	background: #72CCA7;
+	background-color: #72CCA7;
 }
 
 .bl-main > section:nth-child(4) {
 	top: 50%;
 	left: 50%;
-	background: #10A296;
+	background-color: #10A296;
 }
 
 a.bl-box, .bl-box {
@@ -106,23 +105,22 @@ a.bl-box, .bl-box {
 	opacity: 1;
 	/* Centering with flexbox */
     display: -webkit-box;
-    display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     flex-direction: row;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: center;
-    -moz-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -moz-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
@@ -210,7 +208,9 @@ a.bl-box h2,
 	-moz-transition-property: top;
 	-o-transition-duration: 0.5s;
 	-o-transition-property: top;
+	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
+	-webkit-transition-property: top;
 	transition-property: top;
 	position: relative;
 	top: 10px;
@@ -372,8 +372,10 @@ div.bl-panel-items > div {
 	-webkit-transform: translateY(0);
 	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0s linear 0.5s;
 	-moz-transform: translateY(0);
-	-moz-transition: -moz-transform 0.5s ease-in-out, opacity 0s linear 0.5s;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
 	transform: translateY(0);
+	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0s linear 0.5s;
 	transition: transform 0.5s ease-in-out, opacity 0s linear 0.5s;
 	-ms-transform: translateY(0);
 }
@@ -387,7 +389,6 @@ div.bl-panel-items nav {
 	margin-left: -159px;
 	opacity: 0;
 	-webkit-transition: opacity 0.2s ease-in-out 0.5s;
-	-moz-transition: opacity 0.2s ease-in-out 0.5s;
 	transition: opacity 0.2s ease-in-out 0.5s;
 }
 
@@ -417,8 +418,10 @@ div.bl-panel-items > div.bl-show-work {
 	-webkit-transform: translateY(-100%);
 	-webkit-transition: -webkit-transform 0.5s ease-in-out;
 	-moz-transform: translateY(-100%);
-	-moz-transition: -moz-transform 0.5s ease-in-out;
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
 	transform: translateY(-100%);
+	-webkit-transition: -webkit-transform 0.5s ease-in-out;
 	transition: transform 0.5s ease-in-out;
 	-ms-transform: translateY(-100%);
 }
@@ -427,9 +430,10 @@ div.bl-panel-items > div.bl-hide-current-work {
 	opacity: 0;
 	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	-webkit-transform: translateY(-100%) scale(0.5);
-	-moz-transition: -moz-transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	-moz-transform: translateY(-100%) scale(0.5);
+	-webkit-transition: -webkit-transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	-webkit-transform: translateY(-100%) scale(0.5);
 	transform: translateY(-100%) scale(0.5);
 	-ms-transform: translateY(-100%) scale(0.5);
 	z-index: 0;
@@ -440,7 +444,6 @@ div.bl-panel-items > div.bl-hide-current-work {
 
 .bl-main > section {
 	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
 
@@ -471,7 +474,6 @@ div.bl-panel-items > div.bl-hide-current-work {
 .bl-main.bl-expand-item > section:not(.bl-expand),
 .bl-main.bl-expand-item > section.bl-scale-down {
 	-webkit-transform: scale(0.5);
-	-moz-transform: scale(0.5);
 	-ms-transform: scale(0.5);
 	transform: scale(0.5);
 	opacity: 0;
@@ -479,26 +481,22 @@ div.bl-panel-items > div.bl-hide-current-work {
 
 .bl-box {
 	-webkit-transition: opacity 0.2s linear 0.5s;
-	-moz-transition: opacity 0.2s linear 0.5s;
 	transition: opacity 0.2s linear 0.5s;
 }
 
 section.bl-expand .bl-box {
 	opacity: 0;
 	-webkit-transition: opacity 0s linear;
-	-moz-transition: opacity 0s linear;
 	transition: opacity 0s linear;
 }
 
 .bl-box h2 {
 	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
 
 .no-touch section:not(.bl-expand) .bl-box:hover h2 {
 	-webkit-transform: translateY(-15px);
-	-moz-transform: translateY(-15px);
 	-ms-transform: translateY(-15px);
 	transform: translateY(-15px);
 }
@@ -506,7 +504,6 @@ section.bl-expand .bl-box {
 .bl-content,
 .bl-icon-close {
 	-webkit-transition: opacity 0.1s linear 0s;
-	-moz-transition: opacity 0.1s linear 0s;
 	transition: opacity 0.1s linear 0s;
 }
 
@@ -515,7 +512,6 @@ section.bl-expand .bl-icon-close {
 	pointer-events: auto;
 	opacity: 1;
 	-webkit-transition: opacity 0.3s linear 0.5s;
-	-moz-transition: opacity 0.3s linear 0.5s;
 	transition: opacity 0.3s linear 0.5s;
 }
 
