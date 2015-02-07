@@ -55,6 +55,10 @@ ol {
 	list-style: decimal inside none;
 }
 
+sup {
+  font-weight: bold;
+}
+
 .container { height: 100%; }
 
 .bl-main {
