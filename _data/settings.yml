@@ -2,13 +2,16 @@
 # General Site Settings
 # Site settings
 baseurl: ""
-url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://byronbuckley.com"
+social_username: komplexb
+twitter_username: komplexb
+bitbucket_username:  komplexb
+github_username:  komplexb
+instagram_username:  komplexb
 
 title: Byron Buckley
 email: hello@byronbuckley.com
-description: Front-end // Interaction Design // Photography
+description: Front-end Developer
 
 # site default images and content are defined in all.sass
 
