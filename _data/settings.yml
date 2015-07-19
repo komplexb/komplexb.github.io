@@ -25,7 +25,7 @@ description: Front-end Developer
 menu:
 - {name: About Me, url: '#about-me'}
 - {name: Work, url: '#work'}
-- {name: Blog, url: 'http://blog.byronbuckley'}
+- {name: Blog, url: 'http://blog.byronbuckley.com'}
 - {name: Contact, url: '#contact'}
 
 #-------------------------------
