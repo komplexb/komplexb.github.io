@@ -13,7 +13,11 @@
     	image: url(/assets/img/#{$avatar-path});
 	}
 	@include size(200px);
-    order: 3;
+    @include order(3);
+	
+	&:hover {
+//		background-image: url({{ site.data.settings.gravatar_account }});
+    }
   }
   
   [class^="icon-"] {
