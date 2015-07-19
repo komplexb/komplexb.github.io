@@ -9,7 +9,8 @@ bitbucket_username:  komplexb
 github_username:  komplexb
 instagram_username:  komplexb
 
-gravatar_account: byronbuckley@live.com
+gravatar: byronbuckley@live.com
+gravatar_alternate: komplexxx@gmail.com
 
 title: Byron Buckley
 email: hello@byronbuckley.com
@@ -24,7 +25,7 @@ description: Front-end Developer
 menu:
 - {name: About Me, url: '#about-me'}
 - {name: Work, url: '#work'}
-- {name: Clients, url: '#clients'}
+- {name: Blog, url: 'http://blog.byronbuckley'}
 - {name: Contact, url: '#contact'}
 
 #-------------------------------
@@ -87,8 +88,9 @@ clients:
 # Contact Section
 
 social:
-- {icon: 'twitter', link: 'http://twitter.com/komplexb', title: 'Check me out on Twidder!'}
-- {icon: 'github', link: 'http://github.com/komplexb', title: 'Byron on GitHub'}
-- {icon: 'linkedin', link: 'http://linkedin.com/byronbuckley', title: 'Byron on LinkedIn'}
-- {icon: 'flickr', link: 'photos.byronbuckley.com', title: 'My Photography'}
-- {icon: 'instagram', link: 'http://instagram.com/komplexb', title: 'Follow me on IG!'}
+- {icon: 'twitter', link: 'twitter.com/komplexb', platform: 'Twitter'}
+- {icon: 'bitbucket', link: 'bitbucket.com/komplexb', platform: 'Bitbucket'}
+- {icon: 'github', link: 'github.com/komplexb', platform: 'GitHub'}
+- {icon: 'linkedin', link: 'linkedin.com/byronbuckley', platform: 'LinkedIn'}
+- {icon: 'flickr', link: 'photos.byronbuckley.com', platform: 'Flickr'}
+- {icon: 'instagram', link: 'instagram.com/komplexb', platform: 'Instagram'}

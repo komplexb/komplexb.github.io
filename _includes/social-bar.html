@@ -1,7 +1,5 @@
 <section id="contact" class="alt-section section-contact">
     
-    <h3 id="contact">Contact</h3>
-	
 	<div class="social-links">
 		{% for social in site.data.settings.social %}
 			<a href="http://{{social.link}}" title="Byron on {{social.platform}}" target="_blank">
@@ -10,8 +8,4 @@
 		{% endfor %}
 	</div>
     
-	<hr class="bar" />
-	
-	<a class="biglink" href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a>
-	
 </section>

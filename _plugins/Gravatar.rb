@@ -6,7 +6,7 @@ module Jekyll
     # Add our new liquid filter.
     def get_gravatar(input)
 #      "//www.gravatar.com/avatar/#{hash(input)}"
-      "https://secure.gravatar.com/avatar/#{hash(input)}"
+      "http://www.gravatar.com/avatar/#{hash(input)}"
     end
 
     private :hash

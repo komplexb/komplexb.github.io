@@ -5,7 +5,10 @@
   <div class="face-lockup">
     
 <!--    <div class="face-img"></div>-->
-    <img class="face-img" src="{{ site.data.settings.gravatar_account | get_gravatar }}?s=400" alt="">
+    <figure class="face-img">
+      <img id="avatar" src="{{ site.data.settings.gravatar | get_gravatar }}?s=400" alt="">
+      <img id="avatar--alternate" class="" src="{{ site.data.settings.gravatar_alternate | get_gravatar }}?s=400" alt="">
+    </figure>
     
     <div class="icon-pencil">{% include icons/icon-pencil.html %}</div>
     <div class="icon-mouse">{% include icons/icon-mouse.html %}</div>
@@ -16,28 +19,9 @@
   
   
   <div class="blurb">
-    {{ site.data.settings.blurb }}
+ 	{% include about-blurb.html %}
   </div>
   
-  {% if site.data.settings.skills %}
-  
-  <div class="skill-lockup">
-
-    {% for skill in site.data.settings.skills %}
-
-      <div class="skill-unit">
-        <div class="skill-label">{{ skill.name }}</div>
-        <div class="skill-icons skill-{{ skill.value }}">
-            {% for i in (1...10) %}
-                <span></span> 
-            {% endfor %}
-        </div>
-      </div>    
-
-    {% endfor %}
-    
-  </div>
-  
-  {% endif %}
+<!--include skill.html  -->
 
 </section>

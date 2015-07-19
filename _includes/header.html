@@ -2,7 +2,11 @@
 	
 	<nav>
         {% for item in site.data.settings.menu %}
-          <a href="{{ item.url }}">{{ item.name }}</a>
+        	{% if item.name == 'Blog' %}
+          		<a target="_blank" href="{{ item.url }}">{{ item.name }}</a>
+          	{% else %}
+          		<a href="{{ item.url }}">{{ item.name }}</a>
+			{% endif %}
         {% endfor %}
 	</nav>
 	
