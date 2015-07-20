@@ -10,17 +10,21 @@
 //------------------------------------------------
 // Transition the image paths from the settings file to usable SASS variables
 
-$animation: 'bounceOut'
+$animation: 'fadeIn'
 $logo-path: 'logo.svg'
 $bg-header-path: 'hero-bg.jpg'
 $bg-footer-path: 'hero-3.jpg'
 $avatar-path: 'face.jpg'
 
+$projects: {% for project in site.data.settings.projects %} "{{ project.folder }}", {% endfor %}
     
 //------------------------------------------------
 // Set some colors as sass variables     
 $accent: #c99065
 $accent-light: #e1c184
+$headlineColor: #333
+$documentBackgroundColor: #fff
+
 $bgcolor: #e5eaee   
 
 $primary-color: #F6C

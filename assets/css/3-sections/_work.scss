@@ -1,136 +1,172 @@
 .section-work {
-    overflow-x: hidden;
-    h3 {
-        padding-top: 0;
-    }
+  overflow-x: hidden;
 }
 
+/* Hackey-type CSS as a jQuery Alternative for when the browser does not have jQuery enabled. */
+.noscript {
+  display: none;
+}
+
+@each $proj in $projects {
+  ##{$proj}:checked ~ .work-belt .work-wrap .work-container noscript #content-#{$proj} {
+    display: block;
+  }
+}
+
+.return {
+  display: none;
+}
+
+.trigger {
+  display: none;
+
+  &:checked ~ .work-belt {
+    left: -100%;
+
+    .work-wrap .work-container {
+      display: block;
+    }
+  }
+}
+
+/* End of gross / hackey CSS */
+
 .work-belt {
-    width: 200%;
-    background: pink;
-    position: relative;
-    left: 0%;
-    @include transition(all 800ms);
+  width: 200%;
+  position: relative;
+  left: 0%;
+
+  @include transition(all, 800ms);
+
+  &.slided {
+    @include transform(translate3d(-50%, 0, 0));
+  }
 }
 
 .thumb-wrap, .work-wrap {
-    width: 50%;
-    float: left;
+  width: 50%;
+  float: left;
 }
 
 .thumb-container {
-    max-width: 960px;
-    margin: 0px auto;
-//    @include clearfix;
-    
+  display: block;
+  max-width: 960px;
+  margin: 0px auto;
+
+  @include clearfix;
+
+  label {
+    position: relative;
+    display: block;
+    float: left;
+    width: 25%;
+    cursor: pointer;
+
     .thumb-unit {
-        display:block;
-        width: 25%;        
-        float: left;
-        padding-top: 15%;
-        position: relative;
-        overflow: hidden;
-        @include perspective(300);
-        cursor: pointer;
-        background: {
-            position: center center;
-            repeat: no-repeat;
-            size: cover;
-        }
-        
-        @media screen and (max-width: 760px) {
-            width: 50%;
-            padding: 26%;
-        }
-        
-        .thumb-overlay {
-            @include position(absolute, 0% 0px null 0px); //bourbon mixin
-            height: 100%;
-            background: fade-out($accent, 0.1);
-//            background: rgba(255,255,255,.2);
-            text-align: center;
-            @include transition(); //bourbon mixin
-            @include display(flex); //bourbon mixin
-            @include align-items(center); //bourbon mixin
-            @include justify-content(space-around); //bourbon mixin
-            @include transform(rotateX(90deg));
-            
-            strong {
-                padding: 0 20px;
-                display: block;
-                color: white;
-                font: {
-                    weight: 300;
-                    size: 24px;
-                }
-                text-transform: uppercase;
-                line-height: 1.2;
-            }
-            
-            svg {
-                @include size(40px);
-                path {
-                    fill: white;
-                }
-            }
-        }
-        &:hover {
-//            @include filter(blur(3px));
-        }
-        &:hover .thumb-overlay {
-//            @include position(absolute, 0% 0px null 0px);
-            top: 0%;
-            @include transform(rotateX(0deg));
-       
-        }
+      display: block;
+      overflow: hidden;
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
     }
+
+    @media screen and (max-width: 760px) {
+      width: 50%;
+    }
+
+    .thumb-overlay {
+      @include position(absolute);
+
+      @include align-items(center);
+
+      @include justify-content(space-around);
+
+      @include display(flex);
+
+      background: fade-out($accent, 0.1);
+      text-align: center;
+
+      @extend %animationstart_#{$animation};
+
+      strong {
+        display: block;
+        padding: 0 9%;
+        color: white;
+        font: {
+          weight: 300;
+          size: 24px;
+        };
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+    }
+
+    &:hover {
+      z-index: 2;
+
+      .thumb-overlay {
+        @extend %#{$animation};
+      }
+    }
+  }
 }
 
 .work-container {
-    max-width: 600px;
-    margin: 0px auto;
-    position: relative;
-    display: none;
-    
-    h4 {
-        color: $accent;
-        text-transform: uppercase;
-        line-height: 1.2;
-        font: {
-            weight: 300;
-            size: 24px;
-        }        
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 0 15px;
+
+  @include box-sizing(border-box);
+
+  position: relative;
+  display: none;
+
+  h4, noscript h4 {
+    color: $accent;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0 0 20px;
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .work-return {
+    @include size(40px);
+
+    cursor: pointer;
+    opacity: 0.5;
+
+    @include position(absolute, -4px null null -60px);
+
+    path {
+      fill: rgba(0, 0, 0, 0.4);
     }
-    
-    img {
-        max-width: 100%;
-        margin-bottom: 20px;
+
+    &:hover {
+      opacity: 1;
     }
-    
-    .work-return {
-        @include size(40px);
-        cursor: pointer;
-        opacity: 0.5;
-        @include position(absolute, -8px null null -60px);
-        
-        path {
-            fill: rgba(0,0,0,0.4);
-        }
-        
-        &:hover {
-            opacity: 1;
-        }
-    }
+  }
+  
+  .work-return--bottom {
+    @include position(absolute, auto null -12px -60px);
+  }
 }
 
 @media (max-width: 740px) {
-    .work-container {
-        .work-return {
-            left: 0px;
-        }
-        h4 {
-            margin-left: 60px;
-        }
+  .work-container {
+    .work-return {
+      left: 0px;
     }
+
+    h4 {
+      margin-left: 60px;
+    }
+  }
 }
-        

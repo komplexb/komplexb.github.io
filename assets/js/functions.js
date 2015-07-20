@@ -29,29 +29,37 @@ function smoothScroll (duration) {
 }
 
 function workBelt() {
-    $('.thumb-unit').click(function() {
-        $('.work-belt').css('left','-100%');
-        $('.work-container').show();
-    });
+  
+  $(".trigger").remove();
+  $(".return").remove();
 
-    $('.work-return').click(function() {
-        $('.work-belt').css('left','0%');
-        $('.work-container').hide(800);
-    });
+  $('.thumb-container label').click(function() {
+    $('.work-belt').addClass("slided");
+    $('.work-container').show();
+  });
+  
+  $('.work-return').click(function() {
+    $('.work-belt').removeClass("slided");
+    $('.work-container').hide(800);
+  });
+
 }
 
-function workLoad() {
-    $.ajaxSetup({cache: true});
-    
-    $('.thumb-unit').click(function() {
-        var $this = $(this),
-            newTitle = $this.find('strong').text(),
-            newFolder = $this.data('folder'),
-            spinner = "<div class='loader'>Loading...</div>",
-            newHTML = '/work/' + newFolder;
-        $('.project-load').html(spinner).load(newHTML);
-        $('.project-title').text(newTitle);
-    });
+function  workLoad() {
+  
+  $.ajaxSetup({ cache: true });
+  
+  $('.thumb-container label').click(function() {
+    var $this = $(this),
+        newTitle = $this.find('strong').text(),
+        newfolder = $this.find('.thumb-unit').data('folder'),
+        spinner = '<div class="loader">Loading...</div>',
+        newHTML = 'work/'+ newfolder + '/';
+      
+    $('.project-load').html(spinner).load(newHTML);
+    $('.project-title').text(newTitle);
+  });
+  
 }
 
 function clientStuff() {
