@@ -1,1 +1,0 @@
-Design and codebase derived from [FullscreenLayoutPageTransitions](https://github.com/codrops/FullscreenLayoutPageTransitions) first seen at [http://tympanus.net/codrops/?p=14783](http://tympanus.net/codrops/?p=14783).
