@@ -49,11 +49,11 @@ skills:
 # Work Section
 
 projects:
-- {name: Solemates, folder: 'proj-1', file: 'work/proj-1.html', thumb: 'jpg'}
-- {name: Leerink, folder: 'proj-2', file: 'work/proj-2.html', thumb: 'jpg'}
-#- {name: Chicken of the Sea, folder: 'proj-3', file: 'work/proj-3.html', thumb: 'jpg'}
-- {name: Genova Seafood, folder: 'proj-4', file: 'work/proj-4.html', thumb: 'jpg'}
-- {name: Notifyer, folder: 'proj-5', file: 'work/proj-5.html', thumb: 'png'}
+- {name: Solemates, folder: 'solemates', file: 'index.html', thumb: 'jpg'}
+- {name: Leerink, folder: 'leerink', file: 'index.html', thumb: 'jpg'}
+#- {name: Chicken of the Sea, folder: 'cos', file: 'index.html', thumb: 'jpg'}
+- {name: Genova Seafood, folder: 'genova', file: 'index.html', thumb: 'jpg'}
+- {name: Notifyer, folder: 'notifyer', file: 'index.html', thumb: 'png'}
 
 #-------------------------------
 # Client Section
