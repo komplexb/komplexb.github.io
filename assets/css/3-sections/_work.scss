@@ -122,6 +122,10 @@
 
   position: relative;
   display: none;
+  
+  hr {
+    margin: 0 0 10px 0;
+  }
 
   h4, noscript h4 {
     color: $accent;

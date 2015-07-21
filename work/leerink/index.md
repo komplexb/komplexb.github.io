@@ -1,7 +1,16 @@
 ---
-title: Leerink
+title: Leerink Summit
+site-url: http://www.leerinksummit.com/
+role: Front-end Developer
+engagement: Krafted By Us
 ---
 
-![Leerink](assets/img/work/leerink/img1.png)
 
-TYPO: International Design Talks is an annual event held in Berlin, London, and San Francisco. This promotional project is developed to market the event for the designindustry. The use of patterns, sophisticated color scheme and typography are applied for the print and mobile application.
+<a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">
+  ![Leerink](assets/img/work/leerink/img1.png)
+</a> 
+Responsive template development (SCSS + HTML) for single page brochure-style website.  
+<a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Visit {{ page.title }}</a>
+
+Role: {{ page.role }}  
+Engagement: {{ page.engagement }}  
