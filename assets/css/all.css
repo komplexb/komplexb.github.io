@@ -751,9 +751,9 @@ h3, header nav a, header .kicker, footer .lockup .content-wrap a {
   text-transform: uppercase;
 }
 
-header, footer {
+header {
   background-repeat: no-repeat, no-repeat;
-  background-size: 300px, cover;
+  background-size: 45px auto, cover;
   background-position: 30px 50px, 50% 50%;
   background-blend-mode: overlay, normal;
 }
@@ -823,8 +823,12 @@ header .kicker {
   }
 }
 footer {
-  background-image: url(/assets/img/logo.svg), url(/assets/img/hero-3.jpg);
+  background-image: none, url(/assets/img/hero-3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 footer .lockup {
   padding: 50px 30px;
 }
