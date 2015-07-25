@@ -740,11 +740,28 @@ section {
   margin-top: 50px;
 }
 
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-style: italic;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 480px) {
   h3 {
     padding: 50px 0 50px;
   }
 }
+.alt-section {
+  /*background: $bgcolor */
+  /*padding-bottom: 100px */
+}
+.alt-section h3 {
+  color: #d7ac5b;
+}
+
 h3, header nav a, header .kicker, footer .lockup .content-wrap a {
   font-size: 14px;
   font-weight: 700;
@@ -1066,6 +1083,14 @@ sup {
   display: block;
 }
 
+#medullan:checked ~ .work-belt .work-wrap .work-container noscript #content-medullan {
+  display: block;
+}
+
+#realdecoy:checked ~ .work-belt .work-wrap .work-container noscript #content-realdecoy {
+  display: block;
+}
+
 .return {
   display: none;
 }
@@ -1116,7 +1141,7 @@ sup {
   position: relative;
   display: block;
   float: left;
-  width: 25%;
+  width: 33.33333%;
   cursor: pointer;
 }
 .thumb-container label .thumb-unit {
@@ -1199,6 +1224,12 @@ sup {
 .work-container img {
   max-width: 100%;
   margin-bottom: 20px;
+}
+.work-container figure {
+  margin-bottom: 20px;
+}
+.work-container figure img {
+  margin-bottom: 0;
 }
 .work-container .work-return {
   height: 40px;
