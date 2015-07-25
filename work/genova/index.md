@@ -2,12 +2,13 @@
 title: Genova Seafood
 site-url: http://genovaseafood.com
 role: Front-end Developer
-engagement: Krafted By Us
+engagement: Krafted By Us; a Bay Area Web Studio
+tenure: 2015
 ---
 
 
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">
-  ![Genova Seafood](assets/img/work/genova/img1.png)
+  ![Genova Seafood](assets/img/work/genova/img1.jpg)
 </a> 
 Responsive template development (SCSS + HTML) of homepage variations for A/B testing.  
 - <a href="http://www.genovaseafood.com/go/2015r3" target="_blank" title="See Version A">Version A</a>  
@@ -16,3 +17,4 @@ Responsive template development (SCSS + HTML) of homepage variations for A/B tes
 <hr/>
 Role: {{ page.role }}  
 Engagement: {{ page.engagement }}  
+Tenure: {{ page.tenure }}
