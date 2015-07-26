@@ -13,6 +13,6 @@ tenure: 2015
 Responsive template development (SCSS + HTML) for single page brochure-style website.  
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Visit {{ page.title }}</a>
 <hr>
-Role: {{ page.role }}  
 Engagement: {{ page.engagement }}  
+Role: {{ page.role }}  
 Tenure: {{ page.tenure }}

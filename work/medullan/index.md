@@ -16,6 +16,6 @@ The designers provided artifacts of varying fidelity which I built with HTML, LE
 <br>
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Visit {{ page.title }}</a>
 <hr/>
-Role: {{ page.role }}  
 Engagement: {{ page.engagement }}  
+Role: {{ page.role }}  
 Tenure: {{ page.tenure }}

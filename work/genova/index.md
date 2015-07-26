@@ -15,6 +15,6 @@ Responsive template development (SCSS + HTML) of homepage variations for A/B tes
 - <a href="http://www.genovaseafood.com/go/2015s3" target="_blank" title="See Version B">Version B</a>  
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Visit {{ page.title }}</a>
 <hr/>
-Role: {{ page.role }}  
 Engagement: {{ page.engagement }}  
+Role: {{ page.role }}  
 Tenure: {{ page.tenure }}

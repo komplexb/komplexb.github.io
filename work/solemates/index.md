@@ -13,6 +13,6 @@ tenure: 2015
 I joined this project at an early stage which meant heavy involvement in responsive template development (SCSS + HTML).  
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Visit {{ page.title }}</a>
 <hr/>
-Role: {{ page.role }}  
 Engagement: {{ page.engagement }}  
+Role: {{ page.role }}  
 Tenure: {{ page.tenure }}

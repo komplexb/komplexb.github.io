@@ -21,6 +21,6 @@ The ideal use case is to schedule Notifyer's random method to be invoked periodi
 
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Try {{ page.title }}</a>
 <hr/>
-Role: {{ page.role }}  
 Engagement: {{ page.engagement }}  
+Role: {{ page.role }}  
 Stack: {{ page.stack }}
