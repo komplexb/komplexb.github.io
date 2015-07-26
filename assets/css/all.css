@@ -747,6 +747,7 @@ figure {
 figcaption {
   font-style: italic;
   font-weight: bold;
+  text-align: center;
 }
 
 @media screen and (max-width: 480px) {
