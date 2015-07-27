@@ -7,12 +7,8 @@
 	.face-img {
 		@include size(200px);
 		@include order(3);
-		//    background: {
-		//		position: center center;
-		//    	size: cover;
-		//    	image: url(/assets/img/#{$avatar-path});
-		//	}
-		&:hover {
+
+        &:hover {
 			//		background-image: url({{ site.data.settings.gravatar_account }});
 			#avatar {
 				display: none;
@@ -65,7 +61,8 @@
 			margin: 0 auto 30px;
 		}
 		[class^="icon-"] {
-			margin: 10px 9%;
+//			margin: 10px 9%;
+          display: none;
 		}
 	}
 }
