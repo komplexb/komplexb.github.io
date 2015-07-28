@@ -4,6 +4,7 @@ site-url: http://www.leerinksummit.com/
 role: Front-end Developer
 engagement: Krafted By Us; a Bay Area Web Studio
 tenure: 2015
+stack: Craft CMS
 ---
 
 
@@ -15,4 +16,5 @@ Responsive template development (SCSS + HTML) for single page brochure-style web
 <hr>
 Engagement: {{ page.engagement }}  
 Role: {{ page.role }}  
-Tenure: {{ page.tenure }}
+Tenure: {{ page.tenure }}  
+Stack: {{ page.stack }}

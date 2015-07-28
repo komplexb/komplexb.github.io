@@ -17,7 +17,7 @@ Notifyer is a proof of concept solution to a problem I've been thinking about fo
 
 Using Microsoft's OneNote as a datastore, Notifyer utilizes OneNote's API to retrieve notes from a given section. A note is then selected to be pushed to your devices via Pushbullet's API.
 
-The ideal use case is to schedule Notifyer's random method to be invoked periodically. However for the purposes of this demo, users can select a note to be pushed immediately.  
+The ideal use case is to schedule Notifyer's random method to be invoked periodically. In fact Notifyer's functionality would work great bundled as a <a href="http://blog.byronbuckley.com/preview/UvMSmqrnwDJrPUgx3va0/" target="_blank">IFTTT Recipe</a>, however for the purposes of this demo, users can select a note to be pushed immediately.  
 
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Try {{ page.title }}</a>
 <hr/>

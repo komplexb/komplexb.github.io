@@ -4,6 +4,7 @@ site-url: http://thesolemates.com
 role: Front-end Developer
 engagement: Krafted By Us; a Bay Area Web Studio
 tenure: 2015
+stack: Expression Engine
 ---
 
 
@@ -15,4 +16,5 @@ I joined this project at an early stage which meant heavy involvement in respons
 <hr/>
 Engagement: {{ page.engagement }}  
 Role: {{ page.role }}  
-Tenure: {{ page.tenure }}
+Tenure: {{ page.tenure }}  
+Stack: {{ page.stack }}

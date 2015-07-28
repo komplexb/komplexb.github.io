@@ -74,6 +74,11 @@
 
     @media screen and (max-width: 760px) {
       width: 50%;
+//      @media screen and (-webkit-min-device-pixel-ratio:0) {
+//        img[src*=svg] {
+//          margin-bottom: -1px;
+//        }
+//      }
     }
 
     .thumb-overlay {

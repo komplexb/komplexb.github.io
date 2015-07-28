@@ -4,6 +4,7 @@ site-url: http://genovaseafood.com
 role: Front-end Developer
 engagement: Krafted By Us; a Bay Area Web Studio
 tenure: 2015
+stack: Craft CMS
 ---
 
 
@@ -17,4 +18,5 @@ Responsive template development (SCSS + HTML) of homepage variations for A/B tes
 <hr/>
 Engagement: {{ page.engagement }}  
 Role: {{ page.role }}  
-Tenure: {{ page.tenure }}
+Tenure: {{ page.tenure }}  
+Stack: {{ page.stack }}
