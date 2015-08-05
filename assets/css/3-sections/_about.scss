@@ -12,13 +12,16 @@
         &:hover {
 			#avatar {
 //				display: none;
+                opacity: 0;
 			}
 			#avatar--alternate {
+				@include transform (translateY(0));
                 opacity: 1;
 			}
 		}
 		#avatar--alternate {
-            opacity: 0;
+            @include transform (translateY(-100%));
+			opacity: 0;
 		}
 		img {
             @include transition(all .3s ease-in-out);
