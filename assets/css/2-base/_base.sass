@@ -58,9 +58,11 @@ a
   color: $accent
   text-decoration: none
   outline: 0
+  +transition(all .3s ease-in-out)
 
 a:hover, a:focus
   color: lighten($accent, 20%)
+  +transition(all .1s ease-in-out)
 
 
 
@@ -88,7 +90,7 @@ body
   ------------------------------------	*/
 body
   background: $documentBackgroundColor
-  font-size: 14px
+  font-size: 16px
   line-height: 1.6
   font-family: 'Open Sans' sans-serif
   color: $text-color

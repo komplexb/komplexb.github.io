@@ -30,12 +30,12 @@ footer {
         
         a {
             @extend %small-bold;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.7);
             display: inline-block;
             margin-right: 30px;
         
           &:hover {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,1);
           }
         }
       }

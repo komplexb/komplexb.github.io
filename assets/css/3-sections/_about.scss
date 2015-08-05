@@ -7,22 +7,25 @@
 	.face-img {
 		@include size(200px);
 		@include order(3);
+        position: relative;
 
         &:hover {
-			//		background-image: url({{ site.data.settings.gravatar_account }});
 			#avatar {
-				display: none;
+//				display: none;
 			}
 			#avatar--alternate {
-				display: block;
+                opacity: 1;
 			}
 		}
 		#avatar--alternate {
-			display: none;
+            opacity: 0;
 		}
 		img {
+            @include transition(all .3s ease-in-out);
 			border-radius: 50%; //make the image round
 			width: inherit;
+            position: absolute;
+            left: 0;
 		}
 	}
 	[class^="icon-"] {
