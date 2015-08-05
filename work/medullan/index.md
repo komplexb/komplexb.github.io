@@ -11,7 +11,8 @@ tenure: 2014 - 2015
 <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 <br>
 As a member of the UX team I performed UI development for various projects including Medullan's engagement with 
-health insurance company <a href="www.humana.com" target="_blank">Humana Inc</a>. Medullan provided product strategy and UX for Humana’s private Health Insurance Exchange.
+health insurance company <a href="www.humana.com" target="_blank">Humana Inc</a>. Medullan provided product strategy and UX for Humana’s private Health Insurance Exchange
+by utilizing aspects of Lean UX and Agile team structures.
 The designers provided artifacts of varying fidelity which I built with HTML, LESS and jQuery.
 <br>
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Visit {{ page.title }}</a>
