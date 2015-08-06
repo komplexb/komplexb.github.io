@@ -65,10 +65,22 @@
     .thumb-unit {
       display: block;
       overflow: hidden;
+      position: relative;
 
       img {
         display: block;
         max-width: 100%;
+      }
+      
+      span {
+        @include position(absolute, null 10px 5px null);
+        font-size: 12px;
+        color: white;
+        text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.5);
+        
+        @media (max-width: 740px) {
+          @include position(absolute, null 5px 0px null);
+        }
       }
     }
 

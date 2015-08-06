@@ -3,7 +3,7 @@ title: Solemates
 site-url: http://thesolemates.com
 role: Front-end Developer
 engagement: Krafted By Us; a Bay Area Web Studio
-tenure: 2015
+tenure: Q2 - 2015
 stack: Expression Engine
 ---
 

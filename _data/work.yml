@@ -1,7 +1,7 @@
 projects:
-- {name: Solemates, folder: 'solemates', file: 'index.html', thumb: 'jpg'}
-- {name: Leerink, folder: 'leerink', file: 'index.html', thumb: 'jpg'}
-- {name: Genova Seafood, folder: 'genova', file: 'index.html', thumb: 'jpg'}
-- {name: Notifyer, folder: 'notifyer', file: 'index.html', thumb: 'png'}
-- {name: Medullan, folder: 'medullan', file: 'index.html', thumb: 'png'}
-- {name: RealDecoy, folder: 'realdecoy', file: 'index.html', thumb: 'png'}
+- {name: Solemates, folder: 'solemates', file: 'index.html', thumb: 'jpg', tenure: 'Q2 - 2015'}
+- {name: Leerink, folder: 'leerink', file: 'index.html', thumb: 'jpg', tenure: 'Q2 - 2015'}
+- {name: Genova Seafood, folder: 'genova', file: 'index.html', thumb: 'jpg', tenure: 'Q2 - 2015'}
+- {name: Notifyer, folder: 'notifyer', file: 'index.html', thumb: 'png', tenure: '2015'}
+- {name: Medullan, folder: 'medullan', file: 'index.html', thumb: 'png', tenure: '2014 - 2015'}
+- {name: RealDecoy, folder: 'realdecoy', file: 'index.html', thumb: 'png', tenure: '2011 - 2014'}
