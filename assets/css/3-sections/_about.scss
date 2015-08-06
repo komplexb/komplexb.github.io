@@ -20,7 +20,7 @@
 			}
 		}
 		#avatar--alternate {
-            @include transform (translateY(-100%));
+            @include transform (translateY(100%));
 			opacity: 0;
 		}
 		img {
