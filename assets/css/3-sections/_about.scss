@@ -22,6 +22,7 @@
 		#avatar--alternate {
             @include transform (translateY(100%));
 			opacity: 0;
+            pointer-events: none;
 		}
 		img {
             @include transition(all .3s ease-in-out);
