@@ -1,5 +1,5 @@
 jekyll-portfolio
 ================
 
-Repo for following this [tutorial](https://www.youtube.com/playlist?list=PLqGj3iMvMa4KQZUkRjfwMmTq_f1fbxerI).  
-Will be used to build my new website.
+Dev repo for www.byronbuckley.com.  
+Initially derived from this [Jekyll Tutorial](https://www.youtube.com/playlist?list=PLqGj3iMvMa4KQZUkRjfwMmTq_f1fbxerI).  
