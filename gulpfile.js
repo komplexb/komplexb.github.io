@@ -75,5 +75,7 @@ gulp.task('default', ['browser-sync', 'watch']);
 
 
 gulp.task("deploy", ["jekyll-build"], function () {
-	ghpages.publish(path.join(__dirname, '_site'), function(err) {});
+	ghpages.publish(path.join(__dirname, '_site'), {
+		branch: 'master'
+	}, function(err) {});
 });
