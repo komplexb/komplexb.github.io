@@ -3,7 +3,8 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var deploy      = require("gulp-gh-pages");
+var ghpages 	= require('gh-pages');
+var path 		= require('path');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -74,8 +75,5 @@ gulp.task('default', ['browser-sync', 'watch']);
 
 
 gulp.task("deploy", ["jekyll-build"], function () {
-    return gulp.src("./_site/**/*")
-        .pipe(deploy({
-      		branch: "gh-pages"
-    	}));
+	ghpages.publish(path.join(__dirname, '_site'), function(err) {});
 });
