@@ -1,21 +1,19 @@
 header {
-	@extend %bg-img;
+	position: relative;
 	height: 450px;
-	background: {
-		position: 30px 20px, 50% 50%;
-		image: url(/assets/img/#{$logo-path}), url(/assets/img/#{$bg-header-path});
-	}
 	padding-bottom: 50px;
+	background: {
+		image: url(/assets/img/#{$bg-header-path});
+		size: cover;
+		repeat: no-repeat;
+		position: 50% 50%;
+	}
   
-    .logo {
-      @include size(50px); //bourbon mixin
-      float: left;
-      margin: 10px 0 0 30px;
-      
-      path {
-        fill: rgba(0,0,0,0.4);
-      }
-    }
+    > .icon {
+		@include position(absolute, 30px null null 30px);
+		@include size(50px);
+		mix-blend-mode: overlay;
+	}
     
     nav {
       float: right;
@@ -65,8 +63,15 @@ header {
 
 @media (max-width: 640px) {
 	header {
-		background-position: -9999px 20px, 50% 50%;
 		height: 100vh;
+		
+		> .icon {
+			left: 0;
+			text-align: center;
+			display: block;
+			width: 100%;
+			mix-blend-mode: normal;
+		}
 
 		nav {
 			float: none;

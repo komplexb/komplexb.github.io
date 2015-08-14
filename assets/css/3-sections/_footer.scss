@@ -1,25 +1,23 @@
 footer {
+	position: relative;
 	background-image: none, url(/assets/img/#{$bg-footer-path});
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
-
-footer {
-//    @extend %bg-img;
-//	background-repeat: no-repeat, no-repeat;
-//    background-size: 300px auto, cover;
-//    background-position: -10% 50px, 50% 50%;
-//    background-blend-mode: overlay, normal;
-//    background-image: url(/assets/img/#{$logo-path}), url(/assets/img/#{$bg-footer-path});
-    
-  .lockup {
-    padding: 50px 30px;
-    @include clearfix;
+	
+	> .icon {
+		@include position(absolute, 50px null null 50px);
+		@include size(40px);
+		mix-blend-mode: overlay;
+	}
+  
+	.lockup {
+		padding: 50px 30px;
+		@include clearfix;
       
       .content-wrap {
         float: left;
-        margin-left: 80px;  
+        margin-left: 80px;
         
         .copyright {
           margin: 0;
@@ -28,16 +26,26 @@ footer {
           color: rgba(255,255,255,0.4);  
         }
         
-        a {
-            @extend %small-bold;
-            color: rgba(255,255,255,0.7);
-            display: inline-block;
-            margin-right: 30px;
-        
-          &:hover {
-            color: rgba(255,255,255,1);
-          }
-        }
+	  	nav {
+			a {
+				@extend %small-bold;
+				color: rgba(255,255,255,0.7);
+				display: inline-block;
+				margin-right: 30px;
+
+				@media screen and (max-width: 360px) {
+					display: block;
+				}
+
+			  &:hover {
+				color: rgba(255,255,255,1);
+			  }
+				
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
       }
   }
 }
