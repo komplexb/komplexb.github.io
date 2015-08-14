@@ -756,6 +756,12 @@ figcaption {
   text-align: center;
 }
 
+svg {
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
 @media screen and (max-width: 480px) {
   h3 {
     padding: 50px 0 50px;
@@ -769,33 +775,28 @@ figcaption {
   color: #d7ac5b;
 }
 
-h3, header nav a, header .kicker, footer .lockup .content-wrap a {
+h3, header nav a, header .kicker, footer .lockup .content-wrap nav a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 header {
-  background-repeat: no-repeat, no-repeat;
-  background-size: 45px auto, cover;
-  background-position: 30px 50px, 50% 50%;
-  background-blend-mode: overlay, normal;
-}
-
-header {
+  position: relative;
   height: 450px;
-  background-position: 30px 20px, 50% 50%;
-  background-image: url(/assets/img/logo.svg), url(/assets/img/hero-bg.jpg);
   padding-bottom: 50px;
+  background-image: url(/assets/img/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
-header .logo {
+header > .icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
   height: 50px;
   width: 50px;
-  float: left;
-  margin: 10px 0 0 30px;
-}
-header .logo path {
-  fill: rgba(0, 0, 0, 0.4);
+  mix-blend-mode: overlay;
 }
 header nav {
   float: right;
@@ -834,8 +835,14 @@ header .kicker {
 
 @media (max-width: 640px) {
   header {
-    background-position: -9999px 20px, 50% 50%;
     height: 100vh;
+  }
+  header > .icon {
+    left: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    mix-blend-mode: normal;
   }
   header nav {
     float: none;
@@ -847,12 +854,20 @@ header .kicker {
   }
 }
 footer {
+  position: relative;
   background-image: none, url(/assets/img/hero-3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+footer > .icon {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: 40px;
+  width: 40px;
+  mix-blend-mode: overlay;
+}
 footer .lockup {
   padding: 50px 30px;
 }
@@ -871,13 +886,21 @@ footer .lockup .content-wrap .copyright {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.4);
 }
-footer .lockup .content-wrap a {
+footer .lockup .content-wrap nav a {
   color: rgba(255, 255, 255, 0.7);
   display: inline-block;
   margin-right: 30px;
 }
-footer .lockup .content-wrap a:hover {
+@media screen and (max-width: 360px) {
+  footer .lockup .content-wrap nav a {
+    display: block;
+  }
+}
+footer .lockup .content-wrap nav a:hover {
   color: white;
+}
+footer .lockup .content-wrap nav a:last-child {
+  margin-right: 0;
 }
 
 .face-lockup {
@@ -949,6 +972,11 @@ footer .lockup .content-wrap a:hover {
   width: inherit;
   position: absolute;
   left: 0;
+}
+.face-lockup .icon {
+  height: 100px;
+  width: 100px;
+  fill: #c99065;
 }
 .face-lockup [class^="icon-"] {
   height: 100px;
@@ -1272,15 +1300,15 @@ sup {
   margin-bottom: 0;
 }
 .work-container .work-return {
-  height: 40px;
-  width: 40px;
   cursor: pointer;
   opacity: 0.5;
   position: absolute;
   top: -4px;
   left: -60px;
 }
-.work-container .work-return path {
+.work-container .work-return .icon {
+  height: 40px;
+  width: 40px;
   fill: rgba(0, 0, 0, 0.4);
 }
 .work-container .work-return:hover {
