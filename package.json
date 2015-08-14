@@ -12,7 +12,10 @@
     "gh-pages": "^0.3.1",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "1.0.0",
-    "gulp-sass": "^0.7.3"
+    "gulp-ext-replace": "^0.2.0",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-sass": "^0.7.3",
+    "gulp-svg-sprite": "^1.2.8"
   },
   "repository": {
     "type": "git",
@@ -27,5 +30,8 @@
   "bugs": {
     "url": ""
   },
-  "homepage": "http://byronbuckley.com"
+  "homepage": "http://byronbuckley.com",
+  "dependencies": {
+    "node-notifier": "^4.2.3"
+  }
 }

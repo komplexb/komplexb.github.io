@@ -32,6 +32,10 @@
             left: 0;
 		}
 	}
+	.icon {
+		@include size(100px);
+		fill: $accent;
+	}
 	[class^="icon-"] {
 		@include size(100px);
 		background-color: $bgcolor;
