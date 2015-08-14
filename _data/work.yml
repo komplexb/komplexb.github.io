@@ -5,3 +5,5 @@ projects:
 - {name: Notifyer, folder: 'notifyer', file: 'index.html', thumb: 'png', tenure: '2015'}
 - {name: Medullan, folder: 'medullan', file: 'index.html', thumb: 'png', tenure: '2014 - 2015'}
 - {name: RealDecoy, folder: 'realdecoy', file: 'index.html', thumb: 'png', tenure: '2011 - 2014'}
+ 
+base: '/work/'

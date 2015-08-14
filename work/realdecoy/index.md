@@ -9,7 +9,7 @@ tenure: 2011 - 2014
 
 
 <figure>
-	<img src="assets/img/work/realdecoy/img1.jpg" alt="{{ page.figcaption }}" />
+	<img src="/assets/img/work/realdecoy/img1.jpg" alt="{{ page.figcaption }}" />
 	<figcaption>{{ page.figcaption }}</figcaption>
 </figure>
 At RealDecoy I performed Front-end Development for ecommerce clients running Oracle Endeca Commerce (OEC). 

@@ -1,0 +1,13 @@
+<noscript>
+    {% for project in site.data.work.projects %}
+      <div class="noscript" id="content-{{ project.folder }}">
+        <h4 class="project-title">{{ project.name }}</h4>
+        <div class="noscript-load">
+          {% capture project_path %}
+            {{project.folder}}/{{project.file}}
+          {% endcapture %}
+          {% include {{ project_path }} %}
+        </div>
+      </div>
+    {% endfor %}
+</noscript>

@@ -8,8 +8,8 @@ stack: Ruby on Rails
 
 
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">
-  ![Notifyer](assets/img/work/notifyer/img1.png)
-</a> 
+  ![Notifyer](/assets/img/work/notifyer/img1.png)
+</a>  
 Notifyer is a proof of concept solution to a problem I've been thinking about for a long time. Namely:
 
 - How do I get a daily quote from my curated collection?

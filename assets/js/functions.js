@@ -45,7 +45,7 @@ function workBelt() {
 
 }
 
-function  workLoad() {
+function workLoad() {
   
   $.ajaxSetup({ cache: true });
   

@@ -9,8 +9,8 @@ stack: Craft CMS
 
 
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">
-  ![Leerink](assets/img/work/leerink/img1.jpg)
-</a> 
+  ![Leerink](/assets/img/work/leerink/img1.jpg)
+</a>  
 Responsive template development (SCSS + HTML) for single page brochure-style website.  
 <a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Visit {{ page.title }}</a>
 <hr>
