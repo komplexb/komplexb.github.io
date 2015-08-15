@@ -4,6 +4,10 @@ paths = {
   sprites: {
     source: "svg",
     build: "_includes/svg"
+  }, 
+  css: {
+    source: "_site/assets/css/all.css",
+    build: "_site/assets/css/"
   }
 };
 
@@ -17,6 +21,7 @@ var path 		= require('path');
 var svgSprite 	= require('gulp-svg-sprite');
 var Notification = require('node-notifier');
 var plugins 	= require('gulp-load-plugins')();
+var rename      = require("gulp-rename");
 
 var errorHandler = function(e) {
   var notifier;
@@ -44,14 +49,14 @@ gulp.task('jekyll-build', function (done) {
 /**
  * Rebuild Jekyll & do page reload
  */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+gulp.task('jekyll-rebuild', ['jekyll-build', 'autoprefixer'], function () {
     browserSync.reload();
 });
 
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['jekyll-build', 'autoprefixer'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -79,6 +84,17 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('css'));
 });
 
+gulp.task('autoprefixer', function () {
+    return gulp.src(paths.css.source)
+        .pipe(prefix({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(rename(function (path) {
+            path.basename += ".dist";
+        }))
+        .pipe(gulp.dest(paths.css.build));
+});
 
 /**
  * SVG Sprites
@@ -121,7 +137,8 @@ gulp.task('watch', function () {
 gulp.task('default', function() {
   gulp.start(['sprites', 'browser-sync']);
   gulp.watch(['index.html', 'work/**/*.md', '_includes/*.html', '_layouts/*.html', '_posts/*', 'assets/css/**/*.{scss,sass}'], ['jekyll-rebuild']);
-  return gulp.watch(paths.sprites.source + "/**/*.svg", ['sprites']);
+  gulp.watch(paths.sprites.source + "/**/*.svg", ['sprites']);
+  gulp.watch(['_site/assets/css/all.css'], ['autoprefixer']);
 });
 
 

@@ -5,7 +5,7 @@ permalink: pretty
 
 sass:
  sass_dir: /assets/css
- style: expanded 
+ style: compressed 
  sourcemap: auto
     
 highlighter: rouge
