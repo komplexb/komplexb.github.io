@@ -32,14 +32,13 @@
 /* End of gross / hackey CSS */
 
 .work-belt {
+  transition: all 800ms;
   width: 200%;
   position: relative;
   left: 0%;
 
-  @include transition(all, 800ms);
-
   &.slided {
-    @include transform(translate3d(-50%, 0, 0));
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -94,18 +93,13 @@
     }
 
     .thumb-overlay {
+      @extend %animationstart_#{$animation};
       @include position(absolute);
-
-      @include align-items(center);
-
-      @include justify-content(space-around);
-
-      @include display(flex);
-
+      align-items: center;
+      justify-content: space-around;
+      display: flex;
       background: fade-out($accent, 0.1);
       text-align: center;
-
-      @extend %animationstart_#{$animation};
 
       strong {
         display: block;
@@ -134,9 +128,7 @@
   max-width: 600px;
   margin: 0px auto;
   padding: 0 15px;
-
-  @include box-sizing(border-box);
-
+  box-sizing: border-box;
   position: relative;
   display: none;
   

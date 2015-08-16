@@ -13,7 +13,7 @@
 		display: none;
 		
 		&.active-client {
-			@include display(flex);
+			display: flex;
 			@extend %#{$animation};
 		}
         
@@ -58,10 +58,9 @@
 	position: relative;
 	max-width: 750px;
 	margin: 0px auto 100px;
-	@include display(flex);
-	@include align-items(flex-end);
-	@include justify-content(space-around);
-	
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
 	
 	.client-logo {
 		cursor: pointer;
