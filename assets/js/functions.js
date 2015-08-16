@@ -33,7 +33,8 @@ function workBelt() {
   $(".trigger").remove();
   $(".return").remove();
 
-  $('.thumb-container label').click(function() {
+  $('.thumb-container .thumb-unit-wrap').click(function(e) {
+    e.preventDefault();
     $('.work-belt').addClass("slided");
     $('.work-container').show();
   });
@@ -49,7 +50,8 @@ function workLoad() {
   
   $.ajaxSetup({ cache: true });
   
-  $('.thumb-container label').click(function() {
+  $('.thumb-container .thumb-unit-wrap').click(function(e) {
+    e.preventDefault();
     var $this = $(this),
         newTitle = $this.find('strong').text(),
         newfolder = $this.find('.thumb-unit').data('folder'),

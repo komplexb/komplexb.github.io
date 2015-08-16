@@ -12,7 +12,7 @@
     <div class="thumb-wrap">
       <div class="thumb-container">
       {% for project in site.data.work.projects %}
-      <label for="{{ project.folder }}">  
+      <a class="thumb-unit-wrap" href="/work/{{project.folder}}/">  
         <div class="thumb-unit" data-folder="{{ project.folder }}">
           <img src="assets/img/work/{{project.folder}}/thumb.{{project.thumb}}" alt="{{ project.name }}" />
           <span class="">{{ project.tenure }}</span>
@@ -20,7 +20,7 @@
         <div class="thumb-overlay">
           <strong>{{ project.name }}</strong>
         </div>
-      </label>
+      </a>
       {% endfor %}
     </div>
     </div>
