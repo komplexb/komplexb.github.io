@@ -1,4 +1,5 @@
 ---
+layout: work-detail
 title: Notifyer
 site-url: http://notifyer-quotes.herokuapp.com
 role: Front-end Developer, Back-end Developer

@@ -1,13 +1,13 @@
 <footer>
-	<svg class="icon">
-		<use xlink:href="#logo"></use>
-	</svg>
+	<a href="/" class="logo" title="Home">
+      <svg class="icon">
+	    <use xlink:href="#logo"></use>
+	  </svg>
+    </a>
 	<div class="lockup">
 		<div class="content-wrap">
 			<nav> 
-				{% for item in site.data.settings.menu %}
-                  <a href="{{ item.url }}">{{ item.name }}</a>
-                {% endfor %}
+				{% include nav-links.html %}
 			</nav>
 			
 			<p class="copyright">&copy; Byron Buckley</p>

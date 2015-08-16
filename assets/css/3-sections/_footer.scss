@@ -5,7 +5,7 @@ footer {
 	background-repeat: no-repeat;
 	background-size: cover;
 	
-	> .icon {
+	> .logo .icon {
 		@include position(absolute, 50px null null 50px);
 		@include size(40px);
 		mix-blend-mode: overlay;

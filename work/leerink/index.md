@@ -1,4 +1,5 @@
 ---
+layout: work-detail
 title: Leerink Summit
 site-url: http://www.leerinksummit.com/
 role: Front-end Developer

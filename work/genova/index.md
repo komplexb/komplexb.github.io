@@ -1,4 +1,5 @@
 ---
+layout: work-detail
 title: Genova Seafood
 site-url: http://genovaseafood.com
 role: Front-end Developer

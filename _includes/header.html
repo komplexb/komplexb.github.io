@@ -1,15 +1,11 @@
 <header>
-	<svg class="icon">
-		<use xlink:href="#logo"></use>
-	</svg>
+	<a href="/" class="logo" title="Home">
+      <svg class="icon">
+	    <use xlink:href="#logo"></use>
+	  </svg>
+    </a>
 	<nav>
-        {% for item in site.data.settings.menu %}
-        	{% if item.name == 'Blog' %}
-          		<a target="_blank" href="{{ item.url }}">{{ item.name }}</a>
-          	{% else %}
-          		<a href="{{ item.url }}">{{ item.name }}</a>
-			{% endif %}
-        {% endfor %}
+        {% include nav-links.html %}
 	</nav>
 	
 	<h1><span>{{ site.data.settings.title }}</span></h1>

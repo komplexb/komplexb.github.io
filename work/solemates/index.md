@@ -1,4 +1,5 @@
 ---
+layout: work-detail
 title: Solemates
 site-url: http://thesolemates.com
 role: Front-end Developer

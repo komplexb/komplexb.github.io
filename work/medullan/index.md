@@ -1,4 +1,5 @@
 ---
+layout: work-detail
 title: Medullan
 site-url: http://www.medullan.com/work/
 role: UI Developer

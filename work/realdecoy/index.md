@@ -1,4 +1,5 @@
 ---
+layout: work-detail
 title: RealDecoy
 site-url: https://www.realdecoy.com/world/category/work/
 figcaption: A few engagements I've participated in at RealDecoy.

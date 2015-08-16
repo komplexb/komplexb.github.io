@@ -9,7 +9,7 @@ header {
 		position: 50% 50%;
 	}
   
-    > .icon {
+    .logo .icon {
 		@include position(absolute, 30px null null 30px);
 		@include size(50px);
 		mix-blend-mode: overlay;
@@ -65,7 +65,7 @@ header {
 	header {
 		height: 100vh;
 		
-		> .icon {
+		> .logo .icon {
 			left: 0;
 			text-align: center;
 			display: block;
