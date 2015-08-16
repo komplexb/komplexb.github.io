@@ -118,25 +118,12 @@ gulp.task("sprites", function () {
 
 
 /**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
- */
-gulp.task('watch', function () {
-//    gulp.watch('_scss/*.scss', ['sass']);
-//    gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*', 'assets/css/**/*.{scss,sass}'], ['jekyll-rebuild']);
-	gulp.watch(paths.sprites.source + "/**/*.svg", ['sprites']);
-    gulp.watch(['index.html', 'work/**/*.md', '_includes/*.html', '_layouts/*.html', '_posts/*', 'assets/css/**/*.{scss,sass}'], ['jekyll-rebuild']);
-});
-
-/**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-//gulp.task('default', ['browser-sync', 'watch']);
-
 gulp.task('default', function() {
   gulp.start(['sprites', 'browser-sync']);
-  gulp.watch(['index.html', 'work/**/*.md', '_includes/*.html', '_layouts/*.html', '_posts/*', 'assets/css/**/*.{scss,sass}'], ['jekyll-rebuild']);
+  gulp.watch(['index.html', 'work/**/*.md', '_includes/*.html', '_layouts/*.html', '_posts/*', 'assets/css/**/*.{scss,sass}', 'assets/js/**/*'], ['jekyll-rebuild']);
   gulp.watch(paths.sprites.source + "/**/*.svg", ['sprites']);
   gulp.watch(['_site/assets/css/all.css'], ['autoprefixer']);
 });
