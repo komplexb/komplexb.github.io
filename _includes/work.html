@@ -1,18 +1,14 @@
 <section class="alt-section section-work">
   
   <h3 id="work">Work</h3>
-  {% for project in site.data.work.projects %}
-    <input type="radio" name="trigger" class="trigger" id="{{ project.folder }}" />
-  {% endfor %}
-
-  <input type="radio" name="trigger" id="return" class="return" />
 
   <div class="work-belt">
     
     <div class="thumb-wrap">
       <div class="thumb-container">
-      {% for project in site.data.work.projects %}
-      <a class="thumb-unit-wrap" href="/work/{{project.folder}}/">  
+      {% for project_hash in site.data.work.projects %}
+      {% assign project = project_hash[1] %}
+      <a class="thumb-unit-wrap" href="/work/{{project.folder}}/page">  
         <div class="thumb-unit" data-folder="{{ project.folder }}">
           <img src="assets/img/work/{{project.folder}}/thumb.{{project.thumb}}" alt="{{ project.name }}" />
           <span class="">{{ project.tenure }}</span>

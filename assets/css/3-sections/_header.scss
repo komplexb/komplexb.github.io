@@ -1,4 +1,9 @@
 header {
+  
+    + svg {
+      display: none; // hide sprite cuz it causes selecting problems
+    }
+  
 	position: relative;
 	height: 450px;
 	padding-bottom: 50px;

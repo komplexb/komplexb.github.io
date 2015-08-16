@@ -1,21 +1,14 @@
 ---
-layout: work-detail
-title: Leerink Summit
-site-url: http://www.leerinksummit.com/
-role: Front-end Developer
-engagement: Krafted By Us; a Bay Area Web Studio
-tenure: Q2 - 2015
-stack: Craft CMS
 ---
+{% assign project = site.data.work.projects['leerink'] %}
 
-
-<a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">
-  ![Leerink](/assets/img/work/leerink/img1.jpg)
+<a class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">
+  ![{{ project.title }}](/assets/img/work/leerink/img1.jpg)
 </a>  
 Responsive template development (SCSS + HTML) for single page brochure-style website.  
-<a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Visit {{ page.title }}</a>
+<a href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">Visit {{ project.title }}</a>
 <hr>
-Engagement: {{ page.engagement }}  
-Role: {{ page.role }}  
-Tenure: {{ page.tenure }}  
-Stack: {{ page.stack }}
+Engagement: {{ project.engagement }}  
+Role: {{ project.role }}  
+Tenure: {{ project.tenure }}  
+Stack: {{ project.stack }}

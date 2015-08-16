@@ -1,21 +1,15 @@
 ---
-layout: work-detail
-title: Solemates
-site-url: http://thesolemates.com
-role: Front-end Developer
-engagement: Krafted By Us; a Bay Area Web Studio
-tenure: Q2 - 2015
-stack: Expression Engine
 ---
+{% assign project = site.data.work.projects['solemates'] %}
 
-
-<a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">
-  ![Solemates](/assets/img/work/solemates/img1.jpg)
+<a class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">
+  ![{{ project.name }}](/assets/img/work/solemates/img1.jpg)
 </a>  
 I joined this project at an early stage which meant heavy involvement in responsive template development (SCSS + HTML).  
-<a href="{{ page.site-url }}" title="Visit {{ page.title }}" target="_blank">Visit {{ page.title }}</a>
+<a href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">Visit {{ project.title }}</a>
 <hr/>
-Engagement: {{ page.engagement }}  
-Role: {{ page.role }}  
-Tenure: {{ page.tenure }}  
-Stack: {{ page.stack }}
+
+Engagement: {{ project.engagement }}  
+Role: {{ project.role }}  
+Tenure: {{ project.tenure }}  
+Stack: {{ project.stack }}

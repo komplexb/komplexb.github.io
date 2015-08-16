@@ -129,7 +129,8 @@ gulp.task('default', function() {
 });
 
 
-gulp.task("deploy", ["jekyll-build"], function () {
+//gulp.task("deploy", ["jekyll-build"], function () {
+gulp.task("deploy", function () {
 	ghpages.publish(path.join(__dirname, '_site'), {
 		branch: 'master'
 	}, function(err) {});
