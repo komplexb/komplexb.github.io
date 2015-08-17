@@ -151,6 +151,8 @@
   }
 
   .work-return {
+	border: 0;
+	background: none;
   	.icon {
 		@include size(40px);
 		fill: rgba(0, 0, 0, 0.4);

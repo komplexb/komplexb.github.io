@@ -1,8 +1,8 @@
-<section id="contact" class="alt-section section-contact">
+<section id="contact" class="alt-section section-contact" aria-label="Social media profile links">
     
 	<div class="social-links">
 		{% for social in site.data.settings.social %}
-			<a href="http://{{social.link}}" title="Byron on {{social.platform}}" target="_blank">
+			<a href="http://{{social.link}}" title="Byron on {{social.platform}}" aria-label="Byron on {{social.platform}}" target="_blank">
 				<i class="icon-{{social.icon}}"></i>
 			</a>
 		{% endfor %}
