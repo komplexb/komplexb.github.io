@@ -64,7 +64,25 @@ header {
       color: white;
       line-height: 1;
     }
+  
+	&.subpage {
+		height: 80px;
+		
+		@media (min-width: $preMedium) {
+			height: 60px;
+			
+			nav {
+				top: 50%;
+				right: 30px;
+				transform: translateY(-50%);
+				position: absolute;
+				padding: 0;
+			}
+		}
+	}
 }
+
+
 
 @media (max-width: 640px) {
 	header {

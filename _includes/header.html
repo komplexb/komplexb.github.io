@@ -1,4 +1,4 @@
-<header>
+<header class="{{ page.type }}">
 	<a href="/" class="logo" title="Home">
       <svg class="icon">
 	    <use xlink:href="#logo"></use>
@@ -8,7 +8,11 @@
         {% include nav-links.html %}
 	</nav>
 	
-	<h1><span>{{ site.data.settings.title }}</span></h1>
-	<p class="kicker">{{ site.data.settings.description }}</p>
+	{% if page.type == 'subpage' %}
+<!--      <h1>Work</h1>-->
+	{% else %}
+	  <h1><span>{{ site.data.settings.title }}</span></h1>
+      <p class="kicker">{{ site.data.settings.description }}</p>
+	{% endif %}
 	
 </header>

@@ -1,0 +1,11 @@
+/* Break Points */
+$viewportIncrement: 1px;
+
+$small: 480px;
+$medium: 768px;
+$large: 1024px;
+
+$postSmall: $small + $viewportIncrement;
+$preMedium: $medium - $viewportIncrement;
+$preLarge: $large - $viewportIncrement;
+$postLarge: $large + $viewportIncrement;
