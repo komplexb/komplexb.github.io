@@ -12,4 +12,4 @@ highlighter: rouge
 
 encoding: utf-8
 
-exclude: ['svg', 'node_modules', 'gulpfile.js', 'package.json', 'Gemfile', 'Gemfile.lock', 'the_design.psd', 'favicon.png', 'README.md']
+exclude: ['node_modules', 'gulpfile.js', 'package.json', 'Gemfile', 'Gemfile.lock', 'the_design.psd', 'favicon.png', 'README.md']

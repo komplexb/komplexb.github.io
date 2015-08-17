@@ -2,7 +2,7 @@ var paths;
 
 paths = {
   sprites: {
-    source: "svg",
+    source: "assets/img/svg",
     build: "_includes/svg"
   }, 
   css: {
@@ -49,14 +49,14 @@ gulp.task('jekyll-build', function (done) {
 /**
  * Rebuild Jekyll & do page reload
  */
-gulp.task('jekyll-rebuild', ['jekyll-build', 'autoprefixer'], function () {
+gulp.task('jekyll-rebuild', ['build-sequence'], function () {
     browserSync.reload();
 });
 
 /**
- * Wait for jekyll-build, then launch the Server
+ * Wait for build-sequence, then launch the Server
  */
-gulp.task('browser-sync', ['jekyll-build', 'autoprefixer'], function() {
+gulp.task('browser-sync', ['build-sequence'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -70,20 +70,16 @@ gulp.task('browser-sync', ['jekyll-build', 'autoprefixer'], function() {
 });
 
 /**
- * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
+ * Build Sequence
+ * - sprites MUST be placed in includes directory BEFORE jekyll builds
+ * - autoprefixer MUST run AFTER jekyll builds so that it acts on the most recent css file
  */
-gulp.task('sass', function () {
-    return gulp.src('_scss/main.scss')
-        .pipe(sass({
-            includePaths: ['scss'],
-			onError: sass.logError // onError: browserSync.notify
-        }))
-        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
-        .pipe(gulp.dest('_site/css'))
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('css'));
-});
+gulp.task('build-sequence', ['sprites', 'jekyll-build', 'autoprefixer']);
 
+
+/**
+ * Autoprefixer
+ */
 gulp.task('autoprefixer', function () {
     return gulp.src(paths.css.source)
         .pipe(prefix({
@@ -118,8 +114,7 @@ gulp.task("sprites", function () {
 
 
 /**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
+ * Default task
  */
 gulp.task('default', function() {
   gulp.start(['sprites', 'browser-sync']);
@@ -129,8 +124,7 @@ gulp.task('default', function() {
 });
 
 
-//gulp.task("deploy", ["jekyll-build"], function () {
-gulp.task("deploy", function () {
+gulp.task("deploy", ["build-sequence"], function () {
 	ghpages.publish(path.join(__dirname, '_site'), {
 		branch: 'master'
 	}, function(err) {});
