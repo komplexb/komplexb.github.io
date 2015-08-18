@@ -7,9 +7,11 @@ projects:
     title: Solemates
     site-url: http://thesolemates.com
     role: Front-end Developer
+    engagement-type: Project
     engagement: Krafted By Us; a Bay Area Web Studio
-    tenure: Q2 - 2015
+    tenure: Q2 2015
     stack: Expression Engine
+    
   leerink:
     name: Leerink
     folder: 'leerink'
@@ -18,8 +20,9 @@ projects:
     title: Leerink Summit
     site-url: http://www.leerinksummit.com/
     role: Front-end Developer
+    engagement-type: Project
     engagement: Krafted By Us; a Bay Area Web Studio
-    tenure: Q2 - 2015
+    tenure: Q2 2015
     stack: Craft CMS
     
   genova: 
@@ -30,8 +33,9 @@ projects:
     title: Genova Seafood
     site-url: http://genovaseafood.com
     role: Front-end Developer
+    engagement-type: Project
     engagement: Krafted By Us; a Bay Area Web Studio
-    tenure: Q2 - 2015
+    tenure: Q2 2015
     stack: Craft CMS
 
   notifyer: 
@@ -42,6 +46,7 @@ projects:
     title: Notifyer
     site-url: http://notifyer-quotes.herokuapp.com
     role: Front-end Developer, Back-end Developer
+    engagement-type: Project
     engagement: Personal Project
     stack: Ruby on Rails
     tenure: '2015'
@@ -54,6 +59,7 @@ projects:
     title: Medullan
     site-url: http://www.medullan.com/work/
     role: UI Developer
+    engagement-type: Company
     engagement: Medullan; a digital healthcare consulting firm headquartered in Massachusetts, USA.
     tenure: 2014 - 2015
 
@@ -66,6 +72,7 @@ projects:
     site-url: https://www.realdecoy.com/world/category/work/
     figcaption: A few engagements I've participated in at RealDecoy.
     role: Front-end Developer
+    engagement-type: Company
     engagement: RealDecoy; a global CX applications company delivering Commerce & Data Insight solutions. They are headquartered in Ottawa, CA.
     tenure: 2011 - 2014
  

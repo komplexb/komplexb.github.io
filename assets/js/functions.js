@@ -83,7 +83,7 @@ function workLoad() {
       
     $('.project-load').html(spinner).load(newHTML);
     $('.project-title').text(newTitle)
-      .attr('aria-label', 'Details of Project or Engagement: ' + newTitle);
+      .attr('aria-label', 'Project or Engagement details: ' + newTitle);
   });
   
 }
