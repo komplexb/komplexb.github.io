@@ -4,7 +4,8 @@ footer {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
+	background-color: black;
+  
 	> .logo .icon {
 		@include position(absolute, 50px null null 50px);
 		@include size(40px);
