@@ -1,28 +1,30 @@
 <p>
-	Hi, I'm Byron Buckley, a Front-end Developer<sup>1</sup> 
+	Hi, I'm Byron Buckley, a Front-end Developer<span aria-hidden="true">{% fn %}</span> 
 	interested in methods of building user interfaces. 
-	I've had success working on distributed teams alongside UX-ers and back-end developers, 
+	I've had success working on distributed teams alongside UX-ers and back-end developers 
 	to produce robust markup for server-side integration or client use.
 </p>
 
 <p>
-  I stay current by leveraging the curated content<sup>2</sup> 
-  of a few industry newsletters and keeping abreast of front-end guidelines<sup>3</sup> 
-  and best practices<sup>4</sup>.
+  I stay current by leveraging the curated content<span aria-hidden="true">{% fn %}</span> 
+  of a few industry newsletters and keeping abreast of front-end guidelines<span aria-hidden="true">{% fn %}</span> 
+  and best practices<span aria-hidden="true">{% fn %}</span>.
 </p>
 
 <p>
-  While Front-end Development is my core skill, I've also completed graduate studies with the University of Baltimore<sup>5</sup> 
+  While Front-end Development is my core skill, I've also completed graduate studies with the University of Baltimore<span aria-hidden="true">{% fn %}</span> 
   for an academic perspective of design. 
 </p>
-<hr>
-<!--<h3>Footnotes</h3>-->
-<ol class="footnotes">
-  <li><a href="http://blog.salsitasoft.com/the-shifting-definition-of-front-end-developer/" target="_blank">The Shifting Definition of Front-end Developer</a></li>
-<!--  <li><a href="http://blog.salsitasoft.com/the-shifting-definition-of-front-end-developer/" target="_blank">Front-end Defined:</a> UX, HTML, CSS and jQuery, with a smattering of Angular directives and the like (React, Knockout) thrown into the mix.</li>-->
-  <li><a href="https://twitter.com/frontendrescue/lists/cool-people" target="_blank">Twitter List curated by Front-end Rescue</a></li>
-  <li><a href="http://sass-guidelin.es/" target="_blank">Sass Guidelines</a></li>
-  <li><a href="http://cssguidelin.es" target="_blank">CSS Guidelines</a></li>
-  <li><a href="http://www.ubalt.edu/cas/graduate-programs-and-certificates/degree-programs/interaction-design-and-information-architecture/course-descriptions.cfm" target="_blank">Information Design Course Descriptions</a></li>
-</ol>
-<hr>
+<div class="footnotes">
+ <h3>Footnotes</h3>
+  {% footnotes %}
+     {% fnbody %}
+        <a href="http://blog.salsitasoft.com/the-shifting-definition-of-front-end-developer/" target="_blank">The Shifting Definition of Front-end Developer</a>
+     {% endfnbody %}
+     {% fnbody %}<a href="https://twitter.com/frontendrescue/lists/cool-people" target="_blank">Twitter List curated by Front-end Rescue</a>{% endfnbody %}
+     {% fnbody %}<a href="http://sass-guidelin.es/" target="_blank">Sass Guidelines</a>{% endfnbody %}
+     {% fnbody %}<a href="http://cssguidelin.es" target="_blank">CSS Guidelines</a>{% endfnbody %}
+     {% fnbody %}<a href="http://www.ubalt.edu/cas/graduate-programs-and-certificates/degree-programs/interaction-design-and-information-architecture/course-descriptions.cfm" target="_blank">Information Design Course Descriptions</a>{% endfnbody %}
+  {% endfootnotes %}
+  <!--  <li><a href="http://blog.salsitasoft.com/the-shifting-definition-of-front-end-developer/" target="_blank">Front-end Defined:</a> UX, HTML, CSS and jQuery, with a smattering of Angular directives and the like (React, Knockout) thrown into the mix.</li>-->
+</div>
