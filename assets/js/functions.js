@@ -1,15 +1,15 @@
 $( document ).ready(function() {
 
-  //
+  workBelt();
+//  workLoad();
+  clientStuff();
+  ariaWorkBelt();
+  $("header h1, .biglink").fitText(1.2, { minFontSize: '20px', maxFontSize: '72px' })
 
 });
 
 $(function() {
-	workBelt();
-	workLoad();
-	clientStuff();
-	ariaWorkBelt();
-	$("header h1, .biglink").fitText(1.2, { minFontSize: '20px', maxFontSize: '72px' })
+	
 });
 
 /*
@@ -52,16 +52,14 @@ function ariaWorkBelt() {
 }
 
 function workBelt() {
-  var link;
+  var $this;
   $('.thumb-container .thumb-unit-wrap').click(function(e) {
     e.preventDefault();
-    link = $(this);
+    $this = $(this);
     
     $('.work-belt').addClass("slided");
     $('.work-container').show(function() {
-      link.attr("aria-expanded", "true");
-      $(".work-wrap").attr("aria-hidden", "false");
-      $('.project-title').focus();
+      workLoad($this);
     });
   });
   
@@ -69,29 +67,32 @@ function workBelt() {
     $('.work-belt').removeClass("slided");
     $('.work-container').hide(800, function() {
       $(".work-wrap").attr("aria-hidden", "true");
-      link.attr("aria-expanded", "false").focus();
+      $this.attr("aria-expanded", "false").focus();
+      
+      $('.project-load').empty();
+      $('.project-title').empty();
     });
   });
 
 }
 
-function workLoad() {
+function workLoad($this) {
   
   $.ajaxSetup({ cache: true });
   
-  $('.thumb-container .thumb-unit-wrap').click(function(e) {
-    e.preventDefault();
-    var $this = $(this),
-        newTitle = $this.find('strong').text(),
+//    var $this = $(this),
+      var newTitle = $this.find('strong').text(),
         newfolder = $this.find('.thumb-unit').data('folder'),
         spinner = '<div class="loader">Loading...</div>',
         newHTML = 'work/'+ newfolder + '/';
       
-    $('.project-load').html(spinner).load(newHTML);
-    $('.project-title').text(newTitle)
-      .attr('aria-label', 'Project or Engagement details: ' + newTitle);
-  });
-  
+    $('.project-load').html(spinner).load(newHTML, function() {
+      $('.project-title').text(newTitle)
+        .attr('aria-label', 'Project or Engagement details: ' + newTitle).focus();
+      $this.attr("aria-expanded", "true");
+      $(".work-wrap").attr("aria-hidden", "false");
+      $('.project-title').focus();
+    });
 }
 
 function clientStuff() {
