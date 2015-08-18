@@ -9,10 +9,9 @@ $(function() {
 	workBelt();
 	workLoad();
 	clientStuff();
-	
+	ariaWorkBelt();
 	$("header h1, .biglink").fitText(1.2, { minFontSize: '20px', maxFontSize: '72px' })
 });
-
 
 function smoothScroll (duration) {
 	$('a[href^="#"]').on('click', function(event) {
@@ -26,6 +25,14 @@ function smoothScroll (duration) {
 	        }, duration);
 	    }
 	});
+}
+
+function ariaWorkBelt() {
+  /*
+   * set images links as role=button 
+   * which will fallback to links if there is no JS
+   */
+  $(".thumb-unit-wrap").attr("role", "button");
 }
 
 function workBelt() {

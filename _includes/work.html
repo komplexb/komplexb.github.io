@@ -8,13 +8,13 @@
       <div class="thumb-container">
       {% for project_hash in site.data.work.projects %}
       {% assign project = project_hash[1] %}
-      <a class="thumb-unit-wrap" href="/work/{{project.folder}}/page">  
+      <a class="thumb-unit-wrap" href="/work/{{project.folder}}/page" aria-label="Project or Engagment: {{ project.name }}; Tenure: {{ project.tenure }}">  
         <div class="thumb-unit" data-folder="{{ project.folder }}">
-          <img src="assets/img/work/{{project.folder}}/thumb.{{project.thumb}}" alt="{{ project.name }}" />
-          <span class="">{{ project.tenure }}</span>
+          <img src="assets/img/work/{{project.folder}}/thumb.{{project.thumb}}" alt="" />
+          <span class="" >{{ project.tenure }}</span>
         </div> 
         <div class="thumb-overlay">
-          <strong>{{ project.name }}</strong>
+          <strong aria-hidden=true>{{ project.name }}</strong>
         </div>
       </a>
       {% endfor %}
