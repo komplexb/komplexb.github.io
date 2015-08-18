@@ -37,6 +37,7 @@ module Jekyll
     def initialize(tag_name, id, tokens)
       raise(SyntaxError.new("invalid footnote ID")) if ['"', '<', '>'].any? { |c| id.include?(c) }
       @id = id.strip unless id.strip.empty?
+#      @aria_hidden = tokens[0]["aria_hidden"]
       super
     end
 
@@ -46,7 +47,14 @@ module Jekyll
         context.registers[:fn] = context.registers[:fn].next
         @id = context.registers[:fn]
       end
-      "<sup><a href=\"#fn:#{@id}\" class=\"footnote\" rel=\"footnote\">#{@id}</a></sup>"      
+      
+#      if (!@aria_hidden.nil? && @aria_hidden == true)
+#        aria_hidden_tag = "aria-hidden=\"true\""
+#      else
+#        aria_hidden_tag = "aria-hidden=\"false\""
+#      end
+      aria_hidden_tag = "aria-hidden=\"true\""
+      "<sup><a href=\"#fn:#{@id}\" #{aria_hidden_tag} class=\"footnote\" rel=\"footnote\">#{@id}</a></sup>"      
     end
   end
   
