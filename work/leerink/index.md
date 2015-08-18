@@ -2,7 +2,7 @@
 ---
 {% assign project = site.data.work.projects['leerink'] %}
 
-<a class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">
+<a aria-hidden="true" class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">
   ![{{ project.title }}](/assets/img/work/leerink/img1.jpg)
 </a>  
 Responsive template development (SCSS + HTML) for single page brochure-style website.  

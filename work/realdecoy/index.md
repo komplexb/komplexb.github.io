@@ -1,7 +1,7 @@
 ---
 ---
 {% assign project = site.data.work.projects['realdecoy'] %}
-<figure>
+<figure aria-hidden="true">
 	<img src="/assets/img/work/realdecoy/img1.jpg" alt="{{ project.figcaption }}" />
 	<figcaption>{{ project.figcaption }}</figcaption>
 </figure>

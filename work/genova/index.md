@@ -2,7 +2,7 @@
 ---
 {% assign project = site.data.work.projects['genova'] %}
 
-<a class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">
+<a aria-hidden="true" class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">
   ![{{ project.title }}](/assets/img/work/genova/img1.jpg)
 </a>  
 Responsive template development (SCSS + HTML) of homepage variations for A/B testing.  

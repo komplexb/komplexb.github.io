@@ -32,23 +32,39 @@ function ariaWorkBelt() {
    * set images links as role=button 
    * which will fallback to links if there is no JS
    */
-  $(".thumb-unit-wrap").attr("role", "button");
+  var ttwAttr = {
+    role: "button", 
+    "aria-expanded": "false"
+  };
+  $(".thumb-unit-wrap").attr(ttwAttr);
+  
+//  var wwAttr = {
+//    role: "alert",
+//    "aria-live": "assertive"
+//  };
+//  $(".work-wrap").attr(wwAttr);
 }
 
 function workBelt() {
-  
-  $(".trigger").remove();
-  $(".return").remove();
-
+  var link;
   $('.thumb-container .thumb-unit-wrap').click(function(e) {
     e.preventDefault();
+    link = $(this);
+    
     $('.work-belt').addClass("slided");
-    $('.work-container').show();
+    $('.work-container').show(function() {
+      link.attr("aria-expanded", "true");
+      $(".work-wrap").attr("aria-hidden", "false");
+      $('.project-title').focus();
+    });
   });
   
   $('.work-return').click(function() {
     $('.work-belt').removeClass("slided");
-    $('.work-container').hide(800);
+    $('.work-container').hide(800, function() {
+      $(".work-wrap").attr("aria-hidden", "true");
+      link.attr("aria-expanded", "false").focus();
+    });
   });
 
 }
@@ -66,7 +82,8 @@ function workLoad() {
         newHTML = 'work/'+ newfolder + '/';
       
     $('.project-load').html(spinner).load(newHTML);
-    $('.project-title').text(newTitle);
+    $('.project-title').text(newTitle)
+      .attr('aria-label', 'Details of Project or Engagement: ' + newTitle);
   });
   
 }

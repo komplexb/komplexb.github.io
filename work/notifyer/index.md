@@ -2,7 +2,7 @@
 ---
 {% assign project = site.data.work.projects['notifyer'] %}
 
-<a class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">
+<a aria-hidden="true" class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">
   ![{{ project.name }}](/assets/img/work/notifyer/img1.png)
 </a>  
 Notifyer is a proof of concept solution to a problem I've been thinking about for a long time. Namely:
