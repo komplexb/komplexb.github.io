@@ -68,7 +68,6 @@ function workBelt() {
     $('.work-container').hide(800, function() {
       $(".work-wrap").attr("aria-hidden", "true");
       $this.attr("aria-expanded", "false").focus();
-      
       $('.project-load').empty();
       $('.project-title').empty();
     });
@@ -78,13 +77,12 @@ function workBelt() {
 
 function workLoad($this) {
   
-  $.ajaxSetup({ cache: true });
+    $.ajaxSetup({ cache: true });
   
-//    var $this = $(this),
-      var newTitle = $this.find('strong').text(),
-        newfolder = $this.find('.thumb-unit').data('folder'),
+    var newTitle = $this.find('strong').text(),
         spinner = '<div class="loader">Loading...</div>',
-        newHTML = 'work/'+ newfolder + '/';
+        href = $this.attr("href"),
+        newHTML = href.substr(0, href.indexOf("/page") + 1);
       
     $('.project-load').html(spinner).load(newHTML, function() {
       $('.project-title').text(newTitle)

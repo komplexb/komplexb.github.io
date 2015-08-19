@@ -107,7 +107,7 @@
       }
     }
 
-    &:hover {
+    &:hover, &:focus {
       z-index: 2;
 
       .thumb-overlay {
