@@ -38,6 +38,10 @@
 .thumb-wrap, .work-wrap {
   width: 50%;
   float: left;
+  
+  &[aria-hidden="true"] {
+    display: none;
+  }
 }
 
 .thumb-container {
@@ -107,7 +111,7 @@
       }
     }
 
-    &:hover, &:focus {
+    &:hover {
       z-index: 2;
 
       .thumb-overlay {

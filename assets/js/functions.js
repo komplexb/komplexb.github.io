@@ -39,8 +39,9 @@ function ariaWorkBelt() {
    * which will fallback to links if there is no JS
    */
   var ttwAttr = {
-    role: "button", 
-    "aria-expanded": "false"
+    role: "button",
+    "aria-expanded": "false",
+    "aria-controls": "work-item-details"
   };
   $(".thumb-unit-wrap").attr(ttwAttr);
   
@@ -68,8 +69,6 @@ function workBelt() {
     $('.work-container').hide(800, function() {
       $(".work-wrap").attr("aria-hidden", "true");
       $this.attr("aria-expanded", "false").focus();
-      $('.project-load').empty();
-      $('.project-title').empty();
     });
   });
 
@@ -85,11 +84,10 @@ function workLoad($this) {
         newHTML = href.substr(0, href.indexOf("/page") + 1);
       
     $('.project-load').html(spinner).load(newHTML, function() {
-      $('.project-title').text(newTitle)
-        .attr('aria-label', 'Project or Engagement details: ' + newTitle).focus();
       $this.attr("aria-expanded", "true");
       $(".work-wrap").attr("aria-hidden", "false");
-      $('.project-title').focus();
+      $('.project-title').text(newTitle)
+        .attr('aria-label', 'Project or Engagement details: ' + newTitle).focus();
     });
 }
 
