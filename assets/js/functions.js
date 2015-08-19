@@ -1,67 +1,94 @@
 $( document ).ready(function() {
 
-  //
+  workBelt();
+//  workLoad();
+  clientStuff();
+  ariaWorkBelt();
+  $("header h1, .biglink").fitText(1.2, { minFontSize: '20px', maxFontSize: '72px' })
 
 });
 
 $(function() {
-	smoothScroll(300);
-	workBelt();
-	workLoad();
-	clientStuff();
 	
-	$("header h1, .biglink").fitText(1.2, { minFontSize: '20px', maxFontSize: '72px' })
 });
 
+/*
+ * SmoothScroll
+ * Source: https://css-tricks.com/snippets/jquery/smooth-scrolling/
+ */
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({scrollTop: target.offset().top}, 1000, function()
+        {
+          target.attr('tabindex', '-1'); // give target focus support
+          target.focus(); // set focus on new target
+        });
+        return false;
+      }
+    }
+  });
+});
 
-function smoothScroll (duration) {
-	$('a[href^="#"]').on('click', function(event) {
-
-	    var target = $( $(this).attr('href') );
-
-	    if( target.length ) {
-	        event.preventDefault();
-	        $('html, body').animate({
-	            scrollTop: target.offset().top
-	        }, duration);
-	    }
-	});
+function ariaWorkBelt() {
+  /*
+   * set images links as role=button 
+   * which will fallback to links if there is no JS
+   */
+  var ttwAttr = {
+    role: "button",
+    "aria-expanded": "false",
+    "aria-controls": "work-item-details"
+  };
+  $(".thumb-unit-wrap").attr(ttwAttr);
+  
+//  var wwAttr = {
+//    role: "alert",
+//    "aria-live": "assertive"
+//  };
+//  $(".work-wrap").attr(wwAttr);
 }
 
 function workBelt() {
-  
-  $(".trigger").remove();
-  $(".return").remove();
-
+  var $this;
   $('.thumb-container .thumb-unit-wrap').click(function(e) {
     e.preventDefault();
+    $this = $(this);
+    
     $('.work-belt').addClass("slided");
-    $('.work-container').show();
+    $('.work-container').show(function() {
+      workLoad($this);
+    });
   });
   
   $('.work-return').click(function() {
     $('.work-belt').removeClass("slided");
-    $('.work-container').hide(800);
+    $('.work-container').hide(800, function() {
+      $(".work-wrap").attr("aria-hidden", "true");
+      $this.attr("aria-expanded", "false").focus();
+    });
   });
 
 }
 
-function workLoad() {
+function workLoad($this) {
   
-  $.ajaxSetup({ cache: true });
+    $.ajaxSetup({ cache: true });
   
-  $('.thumb-container .thumb-unit-wrap').click(function(e) {
-    e.preventDefault();
-    var $this = $(this),
-        newTitle = $this.find('strong').text(),
-        newfolder = $this.find('.thumb-unit').data('folder'),
+    var newTitle = $this.find('strong').text(),
         spinner = '<div class="loader">Loading...</div>',
-        newHTML = 'work/'+ newfolder + '/';
+        href = $this.attr("href"),
+        newHTML = href.substr(0, href.indexOf("/page") + 1);
       
-    $('.project-load').html(spinner).load(newHTML);
-    $('.project-title').text(newTitle);
-  });
-  
+    $('.project-load').html(spinner).load(newHTML, function() {
+      $this.attr("aria-expanded", "true");
+      $(".work-wrap").attr("aria-hidden", "false");
+      $('.project-title').text(newTitle)
+        .attr('aria-label', 'Project or Engagement details: ' + newTitle).focus();
+    });
 }
 
 function clientStuff() {
