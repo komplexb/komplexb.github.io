@@ -37,7 +37,6 @@ module Jekyll
     def initialize(tag_name, id, tokens)
       raise(SyntaxError.new("invalid footnote ID")) if ['"', '<', '>'].any? { |c| id.include?(c) }
       @id = id.strip unless id.strip.empty?
-#      @aria_hidden = tokens[0]["aria_hidden"]
       super
     end
 
@@ -48,13 +47,12 @@ module Jekyll
         @id = context.registers[:fn]
       end
       
-#      if (!@aria_hidden.nil? && @aria_hidden == true)
-#        aria_hidden_tag = "aria-hidden=\"true\""
-#      else
-#        aria_hidden_tag = "aria-hidden=\"false\""
-#      end
-      aria_hidden_tag = "aria-hidden=\"true\""
-      "<sup><a href=\"#fn:#{@id}\" #{aria_hidden_tag} class=\"footnote\" rel=\"footnote\">#{@id}</a></sup>"      
+      @aria_hidden = true
+      aria_hidden_tag = "aria-hidden=\"#{ @aria_hidden ? 'true' :'false' }\""
+      
+      @rel = false
+      rel_tag = "rel=\"footnote\"" unless !@rel
+      "<sup><a href=\"#fn:#{@id}\" #{aria_hidden_tag} class=\"footnote\" #{rel_tag}>#{@id}</a></sup>"
     end
   end
   
@@ -74,7 +72,10 @@ module Jekyll
       end
       context.stack do
         body = super
-        "<li id=\"fn:#{@id}\" class=\"footnotebody\"value=\"#{@id}\">#{body}</li>"
+        
+        @value = false
+        value_tag = "value=\"#{@id}\"" unless !@value
+        "<li id=\"fn:#{@id}\" class=\"footnotebody\" #{value_tag} >#{body}</li>"
       end
     end
   end
