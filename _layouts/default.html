@@ -3,9 +3,11 @@
 {% include head.html %}
 <body>
 
-{% include header.html %}
+<div class="svg-sprite-wrapper">
+  {% include svg/sprite.html %}
+</div>
 
-{% include svg/sprite.html %}
+{% include header.html %}
 
 <main>{{ content }}</main>
 
