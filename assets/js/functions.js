@@ -1,16 +1,10 @@
 $( document ).ready(function() {
-
-  workBelt();
-//  workLoad();
-  clientStuff();
   ariaWorkBelt();
+  workBelt();
+  clientStuff();
   $("header h1, .biglink").fitText(1.2, { minFontSize: '20px', maxFontSize: '72px' })
-
 });
 
-$(function() {
-	
-});
 
 /*
  * SmoothScroll
@@ -33,35 +27,56 @@ $(function() {
   });
 });
 
+/**
+ * a11yclick - Easily handle keyboard click events on non semantic button elements.
+ *
+ * @param {Object} event Click/keyboard event object.
+ * @returns {Boolean} Returns true or false depending on event type and code.
+ */
+var a11yclick = function(event) {
+    'use strict';
+
+    var code = event.charCode || event.keyCode,
+        type = event.type;
+
+    if (type === 'click') {
+        return true;
+    } else if (type === 'keydown') {
+        if (code === 32 || code === 13) {
+            event.preventDefault();
+            return true;
+        }
+    } else {
+        return false;
+    }
+};
+
 function ariaWorkBelt() {
   /*
    * set images links as role=button 
    * which will fallback to links if there is no JS
    */
-  var ttwAttr = {
+  var workItems = {
     role: "button",
     "aria-expanded": "false",
     "aria-controls": "work-item-details"
   };
-  $(".thumb-unit-wrap").attr(ttwAttr);
-  
-//  var wwAttr = {
-//    role: "alert",
-//    "aria-live": "assertive"
-//  };
-//  $(".work-wrap").attr(wwAttr);
+  $(".thumb-unit-wrap").attr(workItems);
 }
 
 function workBelt() {
   var $this;
-  $('.thumb-container .thumb-unit-wrap').click(function(e) {
+  $('.thumb-container .thumb-unit-wrap').on("click keydown", function(e) {
     e.preventDefault();
-    $this = $(this);
+  	$this = $(this);
     
-    $('.work-belt').addClass("slided");
-    $('.work-container').show(function() {
-      workLoad($this);
-    });
+	if(a11yclick(e)) {
+
+		$('.work-belt').addClass("slided");
+		$('.work-container').show(function() {
+		  workLoad($this);
+		});
+	}
   });
   
   $('.work-return').click(function() {
@@ -127,7 +142,5 @@ function clientStuff() {
 				$('.active-client').removeClass('active-client').prev().addClass('active-client');
 			}
 		}
-		
-		
 	});
 }
