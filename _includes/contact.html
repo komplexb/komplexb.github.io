@@ -1,18 +1,30 @@
-<section id="contact" class="alt-section section-contact">
-    
-    <h3 id="contact">Contact</h3>
-	
-	<div class="social-links">
-		{% for social in site.data.settings.social %}
-			<a href="http://{{social.link}}" title="Byron on {{social.platform}}" aria-label="Byron on {{social.platform}}" target="_blank" rel="external">
-				<i class="icon-{{social.icon}}"></i>
-				<span class="visuallyhidden">Note: Link opens a new window.</span>
-			</a>
-		{% endfor %}
+<section id="contact" class="alt-section" aria-labelledby="contact">
+	<h3 id="contact" aria-level="2" class="visuallyhidden">Contact</h3>
+	<div class="section-contact">
+		<div class="social-links">
+			{% for social in site.data.settings.social %}
+				<a href="http://{{social.link}}" title="Byron on {{social.platform}}" aria-label="Byron on {{social.platform}}" target="_blank" rel="external">
+					<i class="icon-{{social.icon}}"></i>
+				</a>
+			{% endfor %}
+		</div>
 	</div>
-    
-	<hr class="bar" />
-	
-	<a class="biglink" href="mailto:{{ site.data.settings.email }}">{{ site.data.settings.email }}</a>
-	
+
+	<form method="post" action="//formspree.io/{{ site.data.settings.email }}">
+		<legend class="visuallyhidden">Contact form: Send Byron a Message</legend>	
+		<div class="contact-info-group">
+			<label><span>Name</span>
+				<input type="text" name="name">
+			</label>
+			<label><span>Email</span>
+				<input type="email" name="_replyto">
+			</label>
+		</div>
+		<label><span>Message</span>
+			<textarea name="message"></textarea>
+		</label>
+		<div class="submit-wrap">
+			<input type="submit" value="Send">
+		</div>
+	</form>
 </section>
