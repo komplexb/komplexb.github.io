@@ -1,6 +1,9 @@
 {% for item in site.data.settings.menu %}
     {% if item.name == 'Blog' %}
-        <a target="_blank" href="{{ item.url }}">{{ item.name }}</a>
+        <a target="_blank" rel="external" href="{{ item.url }}">
+          {{ item.name }}
+          <span class="visuallyhidden">Note: Link opens a new window.</span>
+        </a>
     {% else %}
         <a href="/{{ item.url }}">{{ item.name }}</a>
     {% endif %}

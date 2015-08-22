@@ -9,7 +9,7 @@ At RealDecoy I performed Front-end Development for ecommerce clients running Ora
 OEC web applications were primarily developed in Java, which gave me the opportunity to work with JavaServer Pages Standard Tag Library (JSTL) as I integrated styles. 
 I was also tasked with equipping a few back-end developers with basic front-end development techniques. 
 <br>
-<a href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">Visit {{ project.title }}</a>
+<a href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank" rel="external">Visit {{ project.title }}</a>
 <hr/>
 Engagement: {{ project.engagement }}  
 Role: {{ project.role }}  

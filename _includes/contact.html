@@ -4,8 +4,9 @@
 	
 	<div class="social-links">
 		{% for social in site.data.settings.social %}
-			<a href="http://{{social.link}}" title="Byron on {{social.platform}}" aria-label="Byron on {{social.platform}}" target="_blank">
+			<a href="http://{{social.link}}" title="Byron on {{social.platform}}" aria-label="Byron on {{social.platform}}" target="_blank" rel="external">
 				<i class="icon-{{social.icon}}"></i>
+				<span class="visuallyhidden">Note: Link opens a new window.</span>
 			</a>
 		{% endfor %}
 	</div>

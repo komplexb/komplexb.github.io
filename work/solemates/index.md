@@ -2,11 +2,11 @@
 ---
 {% assign project = site.data.work.projects['solemates'] %}
 
-<a aria-hidden="true" class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">
+<a aria-hidden="true" class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank" rel="external">
   ![{{ project.name }}](/assets/img/work/solemates/img1.jpg)
 </a>  
 I joined this project at an early stage which meant heavy involvement in responsive template development (SCSS + HTML).  
-<a href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank">Visit {{ project.title }}</a>
+<a href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank" rel="external">Visit {{ project.title }}</a>
 <hr/>
 
 Engagement: {{ project.engagement }}  
