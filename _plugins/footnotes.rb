@@ -84,7 +84,7 @@ module Jekyll
     def render(context)
       context.stack do
         body = super
-        "<ol class=\"footnotelist\">#{body}</ol>"
+        "<ol class=\"footnotelist\" aria-labelledby=\"footnotes\">#{body}</ol>"
       end
     end
   end
