@@ -51,6 +51,15 @@
 
   @include clearfix;
 
+  .thumb-unit-wrap:nth-last-child(4):first-child, 
+  .thumb-unit-wrap:nth-last-child(4):first-child ~ .thumb-unit-wrap {
+    width: percentage(1/4);
+    
+    @media screen and (max-width: 760px) {
+      width: 50%;
+    }
+  }
+  
   .thumb-unit-wrap {
     position: relative;
     display: block;

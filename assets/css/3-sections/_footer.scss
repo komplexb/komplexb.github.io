@@ -1,52 +1,45 @@
 footer {
-	position: relative;
-	background-image: none, url(/assets/img/#{$bg-footer-path});
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: black;
-  
-	> .logo .icon {
-		@include position(absolute, 50px null null 50px);
-		@include size(40px);
-		mix-blend-mode: overlay;
-	}
-  
-	.lockup {
-		padding: 50px 30px;
-		@include clearfix;
-      
-      .content-wrap {
-        float: left;
-        margin-left: 80px;
-        
-        .copyright {
-          margin: 0;
-          text-transform: uppercase;
-          font-size: 12px;
-          color: rgba(255,255,255,0.4);  
-        }
-        
-	  	nav {
-			a {
-				@extend %small-bold;
-				color: rgba(255,255,255,0.7);
-				display: inline-block;
-				margin-right: 30px;
-
-				@media screen and (max-width: 360px) {
-					display: block;
-				}
-
-			  &:hover {
-				color: rgba(255,255,255,1);
-			  }
-				
-				&:last-child {
-					margin-right: 0;
-				}
-			}
-		}
+  margin-top:  50px;
+  position: relative;
+  background-image: none, url(/assets/img/#{$bg-footer-path});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  > .logo .icon {
+    @include position(absolute, 50px null null 50px);
+    @include size(40px);
+    mix-blend-mode: overlay;
+  }
+  .lockup {
+    padding: 50px 30px;
+    @include clearfix;
+    .content-wrap {
+      float: left;
+      margin-left: 80px;
+      .copyright {
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.4);
       }
+      nav {
+        a {
+          @extend %small-bold;
+          color: rgba(255, 255, 255, 0.7);
+          display: inline-block;
+          margin-right: 30px;
+          @media screen and (max-width: 360px) {
+            display: block;
+          }
+          &:hover {
+            color: rgba(255, 255, 255, 1);
+          }
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
   }
 }
