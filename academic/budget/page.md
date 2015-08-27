@@ -1,5 +1,5 @@
 ---
 layout: work-detail
-title: Genova Seafood
+title: Budget
 ---
 {% include_relative index.md %}
