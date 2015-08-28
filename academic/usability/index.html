@@ -1,0 +1,22 @@
+---
+---
+{% assign project = site.data.academic.projects['usability'] %}
+
+<figure aria-hidden="true">
+	<img src="/assets/img/academic/{{ project.folder }}/img1.jpg" alt="{{ project.figcaption }}" />
+	<figcaption>
+	  {{ project.figcaption }}
+    </figcaption>
+</figure>
+
+<p>
+    Usability testing refers to a process that employs people as testing participants who are representative of the target audience to evaluate the degree to which a product meets specific usability criteria. 
+</p>
+<p>
+  In this assignment, I perform usability tests on a grades management software used by a few local high schools.
+</p>
+<hr/>
+<ul class="academic-detail__links">
+  <li><a href="/academic/{{ project.folder }}/{{ project.research-paper }}" title="" target="_blank" rel="external">Test Script</a></li>
+  <li><a href="{{ project.folder }}/{{ project.presentation }}" title="" target="_blank" rel="external">Test Findings</a></li>
+</ul>

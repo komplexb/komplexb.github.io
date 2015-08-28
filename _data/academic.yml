@@ -34,9 +34,8 @@ projects:
     folder: 'usability'
     file: 'index.html'
     thumb: 'png'
-    research-paper: 
-    presentation: 
-    demo: http://byronbuckley.com/easy-budget/
+    research-paper: test-script.pdf
+    presentation: test-findings.pdf
     course: User Research Methods
  
 base: '/work/'
