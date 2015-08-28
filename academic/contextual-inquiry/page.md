@@ -2,4 +2,4 @@
 layout: work-detail
 title: Contextual Inquiry
 ---
-{% include_relative index.md %}
+{% include_relative index.html %}

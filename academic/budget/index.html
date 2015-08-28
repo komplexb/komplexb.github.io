@@ -1,0 +1,20 @@
+---
+---
+{% assign project = site.data.academic.projects['budget'] %}
+
+<figure aria-hidden="true">
+	<img src="/assets/img/academic/{{ project.folder }}/img1.jpg" alt="{{ project.figcaption }}" />
+	<figcaption>
+	  Source: <a href="{{ project.figcaption-url }}" target="_blank" rel="external">{{ project.figcaption }}</a>
+    </figcaption>
+</figure>
+
+<p>Tasked with researching and designing a Budgeting application for a underserved user group, I selected individuals with Down syndrome.</p>
+<p>Down syndrome (DS) is a disorder that manifests itself in disabilities that affect all three major types of capabilities (cognitive, motor, and perceptual).</p>
+<p>My findings and resulting prototype are available below. </p>
+<hr/>
+<ul class="academic-detail__links">
+  <li><a href="/academic/{{ project.folder }}/{{ project.research-paper }}" title="" target="_blank" rel="external">Research Paper</a></li>
+  <li><a href="{{ project.folder }}/{{ project.presentation }}" title="" target="_blank" rel="external">Presentation</a></li>
+  <li><a href="{{ project.demo }}" title="" target="_blank" rel="external">Demo</a></li>
+</ul>

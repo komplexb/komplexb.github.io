@@ -8,26 +8,26 @@ projects:
     presentation: presentation.pdf
     demo: http://byronbuckley.com/easy-budget/
     course: Humans, Computers and Cognition
+    figcaption: "Personal Finance by Trent Hamm"
+    figcaption-url: "http://www.thesimpledollar.com/onepage/"
 
   contextual-inquiry: 
     name: Contextual Inquiry
     folder: 'contextual-inquiry'
     file: 'index.html'
     thumb: 'jpg'
-    research-paper: 
-    presentation: 
-    demo: http://byronbuckley.com/easy-budget/
+    research-paper: paper.pdf
     course: User Research Methods
+    figcaption: Interview Session with HR Manager
 
   image-collage: 
     name: Image Collaging
     folder: 'image-collage'
     file: 'index.html'
     thumb: 'jpg'
-    research-paper: 
-    presentation: 
-    demo: http://byronbuckley.com/easy-budget/
+    presentation: presentation.pdf
     course: User Research Methods
+    figcaption: Instead of printed images, I used Pinterest to facilitate the collage session.
     
   usability: 
     name: Usability Test

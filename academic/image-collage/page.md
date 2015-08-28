@@ -1,5 +1,5 @@
 ---
 layout: work-detail
-title: Designing for Down Syndrome
+title: Image Collage
 ---
 {% include_relative index.html %}
