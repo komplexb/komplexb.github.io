@@ -118,7 +118,7 @@ gulp.task("sprites", function () {
  */
 gulp.task('default', function() {
   gulp.start(['sprites', 'browser-sync']);
-  gulp.watch(['assets/img/**/*.{jpg,png,gif}', 'index.html', '{work,academic}/**/*.{md,html}', '_data/*.yml', '_includes/academic/**/*.html', '_layouts/*.html', '_posts/*', 'assets/css/**/*.{scss,sass}', 'assets/js/**/*'], ['jekyll-rebuild']);
+  gulp.watch(['assets/img/**/*.{jpg,png,gif}', 'index.html', '{work,ux}/**/*.{md,html}', '_data/*.yml', '_includes/ux/**/*.html', '_layouts/*.html', '_posts/*', 'assets/css/**/*.{scss,sass}', 'assets/js/**/*'], ['jekyll-rebuild']);
   gulp.watch(paths.sprites.source + "/**/*.svg", ['sprites']);
   gulp.watch(['_site/assets/css/all.css'], ['autoprefixer']);
 });
