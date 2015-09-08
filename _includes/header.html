@@ -17,7 +17,13 @@
 <!--      <h1>Work</h1>-->
 	{% else %}
 	  <h1><span>{{ site.data.settings.title }}</span></h1>
-      <p class="kicker">{{ site.data.settings.description }}</p>
+      <p class="kicker">
+       {% if site.data.settings.hired %}
+         {{ site.data.settings.description }}
+       {% else %}
+         {{ site.data.settings.alt-description }}
+       {% endif %}
+      </p>
 	{% endif %}
 	
 </header>

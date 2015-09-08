@@ -3,7 +3,12 @@
     {% if page.title %}
       {{ site.data.settings.title }} | {{ page.title }}
     {% else %}
-      {{ site.data.settings.title }} | {{ site.data.settings.description }}
+       {{ site.data.settings.title }} | 
+       {% if site.data.settings.hired %}
+         {{ site.data.settings.description }}
+       {% else %}
+         {{ site.data.settings.alt-description }}
+       {% endif %}
     {% endif %}
   </title>
   <meta name="description" content="Freelance Front-end Developer available for part-time, full-time and contract-to-hire engagements." />

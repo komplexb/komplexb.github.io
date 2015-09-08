@@ -5,6 +5,12 @@
           <span class="visuallyhidden">Note: Link opens a new window.</span>
         </a>
     {% else %}
-        <a href="/{{ item.url }}">{{ item.name }}</a>
+        <a href="/{{ item.url }}">
+          {% if site.data.settings.hired %}
+            {{ item.name }}
+          {% else %}
+            {{ item.name | replace: 'Contact', 'Hire Me' }}
+          {% endif %}
+        </a>
     {% endif %}
 {% endfor %}
