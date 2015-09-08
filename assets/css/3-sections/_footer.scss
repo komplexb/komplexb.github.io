@@ -25,6 +25,7 @@ footer {
       }
       nav {
         a {
+          @include link-hover-transition;
           @extend %small-bold;
           mix-blend-mode: overlay;
           color: white;

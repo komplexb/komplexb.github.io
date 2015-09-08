@@ -22,9 +22,10 @@ header {
       padding: 30px 30px 0 0;
       
       a {
+        @include link-hover-transition;
         display: inline-block;
         margin-left: 20px;
-        mix-blend-mode: overlay;
+//        mix-blend-mode: overlay;
         color: white;
         @extend %small-bold;
         

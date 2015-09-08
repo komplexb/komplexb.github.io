@@ -16,3 +16,26 @@
     background-position: 30px 50px, 50% 50%;
     background-blend-mode: overlay, normal;
 }
+
+@mixin link-hover-transition {
+  position: relative;
+        
+  &::after {
+    transition: width .25s;
+    content: '';
+    left: 0;
+    bottom: -1px;
+    position: absolute;
+    display: inline-block;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    mix-blend-mode: overlay;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+}
