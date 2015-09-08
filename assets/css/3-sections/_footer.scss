@@ -26,7 +26,8 @@ footer {
       nav {
         a {
           @extend %small-bold;
-          color: rgba(255, 255, 255, 0.7);
+          mix-blend-mode: overlay;
+          color: white;
           display: inline-block;
           margin-right: 30px;
           @media screen and (max-width: 360px) {

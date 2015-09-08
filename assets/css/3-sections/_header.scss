@@ -24,7 +24,8 @@ header {
       a {
         display: inline-block;
         margin-left: 20px;
-        color: rgba(255,255,255,0.7);
+        mix-blend-mode: overlay;
+        color: white;
         @extend %small-bold;
         
          &:hover {
