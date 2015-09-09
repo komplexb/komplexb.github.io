@@ -30,10 +30,9 @@
     width: 0;
     height: 3px;
     background-color: white;
-    mix-blend-mode: overlay;
   }
 
-  &:hover {
+  &:hover, &:focus {
     &::after {
       width: 100%;
     }

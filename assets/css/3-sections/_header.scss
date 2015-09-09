@@ -25,11 +25,10 @@ header {
         @include link-hover-transition;
         display: inline-block;
         margin-left: 20px;
-//        mix-blend-mode: overlay;
         color: white;
         @extend %small-bold;
         
-         &:hover {
+         &:hover, &:focus {
           color: rgba(255,255,255,1);
          }
       }

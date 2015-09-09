@@ -27,14 +27,13 @@ footer {
         a {
           @include link-hover-transition;
           @extend %small-bold;
-          mix-blend-mode: overlay;
           color: white;
           display: inline-block;
           margin-right: 30px;
           @media screen and (max-width: 360px) {
             display: block;
           }
-          &:hover {
+          &:hover, &:focus {
             color: rgba(255, 255, 255, 1);
           }
           &:last-child {
