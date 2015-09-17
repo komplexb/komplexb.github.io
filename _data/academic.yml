@@ -1,4 +1,15 @@
 projects:
+  glass: 
+    name: Designing for Glass
+    folder: 'glass'
+    file: 'index.html'
+    thumb: 'jpg'
+    research-paper: paper.pdf
+    presentation: presentation.pdf
+    demo: demo/#p=home&c=1
+    course: Interaction and Interface Design
+    figcaption: "A mockup of the start screen for our Glass app"
+
   budget: 
     name: Designing for Down Syndrome
     folder: 'budget'
@@ -20,15 +31,6 @@ projects:
     course: User Research Methods
     figcaption: Interview Session with HR Manager
 
-  image-collage: 
-    name: Image Collaging
-    folder: 'image-collage'
-    file: 'index.html'
-    thumb: 'jpg'
-    presentation: presentation.pdf
-    course: User Research Methods
-    figcaption: Instead of printed images, I used Pinterest to facilitate the collage session.
-    
   usability: 
     name: Usability Test
     folder: 'usability'

@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /portfolio/basecamp/
 Disallow: /resume.pdf
