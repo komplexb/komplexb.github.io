@@ -1,17 +1,4 @@
 projects:
-  theheroco: 
-    name: The Hero Co
-    folder: 'theheroco'
-    file: 'index.html'
-    thumb: 'jpg'
-    title: The Hero Co
-    site-url: http://theheroco.com
-    role: Web Developer
-    engagement-type: Company
-    engagement: The Hero Company
-    tenure: 2015 - 2016
-    stack: PHP
-    
   solemates: 
     name: Solemates
     folder: 'solemates'
@@ -50,6 +37,19 @@ projects:
     engagement: Krafted By Us; a Bay Area Web Studio
     tenure: Q2 2015
     stack: Craft CMS
+
+  notifyer: 
+    name: Notifyer
+    folder: 'notifyer'
+    file: 'index.html'
+    thumb: 'png'
+    title: Notifyer
+    site-url: http://notifyer-quotes.herokuapp.com
+    role: Front-end Developer, Back-end Developer
+    engagement-type: Project
+    engagement: Personal Project
+    stack: Ruby on Rails
+    tenure: '2015'
 
   medullan: 
     name: Medullan
