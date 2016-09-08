@@ -3,19 +3,20 @@
 {% assign project = site.data.work.projects['theheroco'] %}
 
 <a aria-hidden="true" class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank" rel="external">
-  ![{{ project.name }}](/assets/img/work/theheroco/img1.jpg)
+  ![{{ project.name }}](/assets/img/work/theheroco/img2.jpg)
 </a>  
-Notifyer is a proof of concept solution to a problem I've been thinking about for a long time. Namely:
+The Hero Company is a digital marketing company that authors incredible, life-changing information products: ebooks, seminars and online courses.
 
-- How do I get a daily quote from my curated collection?
-- How can I effortlessly resurface a buried quote so I can re-apply it's inspiration and lessons to the present?
+I worked on the various sales funnels driving customers to these products. 
+My primary activities revolved around using PHP & JavaScript to integrate third-party email, commerce and analytics services.
 
-Using Microsoft's OneNote as a datastore, Notifyer utilizes OneNote's API to retrieve notes from a given section. A note is then selected to be pushed to your devices via Pushbullet's API.
-
-The ideal use case is to schedule Notifyer's random method to be invoked periodically, perhaps as a <a href="/assets/img/work/notifyer/zapier.png" target="_blank" rel="external">Zapier App</a>.  
-Notifyer is still under development.
-
-<a href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank" rel="external">Try {{ project.title }}</a>
+View Websites:
+<ul>
+  <li><a href="https://thesocialmanfreechapter.com/1/index2nh2.php" title="Visit The Socialman Free Chapter" target="_blank" rel="external">The Socialman Free Chapter</a></li>
+  <li><a href="http://girlfriend-system.com/quiz/first-date/" title="Visit First Date Quiz" target="_blank" rel="external">First Date Quiz</a></li>
+  <li><a href="https://girlfriend-system.com/" title="Visit The Girlfriend Activation System" target="_blank" rel="external">The Girlfriend Activation System</a></li>
+  <li><a href="http://www.thetencode.com/d00_course_main-1312448/" title="Visit The Ten Code" target="_blank" rel="external">The Ten Code</a></li>
+</ul>
 <hr/>
 Engagement: {{ project.engagement }}  
 Role: {{ project.role }}  
