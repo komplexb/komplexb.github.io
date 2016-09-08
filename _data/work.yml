@@ -25,19 +25,6 @@ projects:
     tenure: Q2 2015
     stack: Expression Engine
     
-  leerink:
-    name: Leerink
-    folder: 'leerink'
-    file: 'index.html'
-    thumb: 'jpg'
-    title: Leerink Summit
-    site-url: http://www.leerinksummit.com/
-    role: Front-end Developer
-    engagement-type: Project
-    engagement: Krafted By Us; a Bay Area Web Studio
-    tenure: Q2 2015
-    stack: Craft CMS
-    
   genova: 
     name: Genova Seafood
     folder: 'genova'
@@ -50,6 +37,19 @@ projects:
     engagement: Krafted By Us; a Bay Area Web Studio
     tenure: Q2 2015
     stack: Craft CMS
+    
+  notifyer: 
+    name: Notifyer
+    folder: 'notifyer'
+    file: 'index.html'
+    thumb: 'png'
+    title: Notifyer
+    site-url: http://notifyer-quotes.herokuapp.com
+    role: Front-end Developer, Back-end Developer
+    engagement-type: Project
+    engagement: Personal Project
+    stack: Ruby on Rails
+    tenure: '2015'
 
   medullan: 
     name: Medullan
