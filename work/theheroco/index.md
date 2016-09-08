@@ -7,7 +7,7 @@
 </a>  
 The Hero Company is a digital marketing company that authors incredible, life-changing information products: ebooks, seminars and online courses.
 
-I worked on the various sales funnels driving customers to these products. 
+I worked on the various sales funnels driving potential customers to these products. 
 My primary activities revolved around using PHP & JavaScript to integrate third-party email, commerce and analytics services.
 
 View Websites:
