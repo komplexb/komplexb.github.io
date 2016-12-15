@@ -64,7 +64,6 @@ gulp.task('browser-sync', ['build-sequence'], function() {
         open: false, 
 		port: 4000, 
 		xip: true, 
-		tunnel: "byronbuckley", 
 		logSnippet: true
     });
 });

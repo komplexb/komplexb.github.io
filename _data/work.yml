@@ -1,4 +1,17 @@
 projects:
+  notifyer: 
+    name: Notifyer
+    folder: 'notifyer'
+    file: 'index.html'
+    thumb: 'png'
+    title: Notifyer
+    site-url: https://github.com/komplexb/notifyer-electron
+    role: Maker
+    engagement-type: Project
+    engagement: Side Project
+    stack: JavaScript, Electron, VueJS
+    tenure: 'Q4 2016'
+    
   theheroco: 
     name: The Hero Co
     folder: 'theheroco'
@@ -38,19 +51,6 @@ projects:
     tenure: Q2 2015
     stack: Craft CMS
     
-  notifyer: 
-    name: Notifyer
-    folder: 'notifyer'
-    file: 'index.html'
-    thumb: 'png'
-    title: Notifyer
-    site-url: http://notifyer-quotes.herokuapp.com
-    role: Front-end Developer, Back-end Developer
-    engagement-type: Project
-    engagement: Personal Project
-    stack: Ruby on Rails
-    tenure: '2015'
-
   medullan: 
     name: Medullan
     folder: 'medullan'
