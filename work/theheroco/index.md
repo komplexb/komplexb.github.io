@@ -3,7 +3,7 @@
 {% assign project = site.data.work.projects['theheroco'] %}
 
 <a aria-hidden="true" class="work__image" href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank" rel="external">
-  ![{{ project.name }}](/assets/img/work/theheroco/img2.jpg)
+  ![{{ project.name }}](http://i.imgur.com/gFnfv3j.gif)
 </a>  
 The Hero Company is a digital marketing company that authors incredible, life-changing information products: ebooks, seminars and online courses.
 
