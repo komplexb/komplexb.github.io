@@ -4,7 +4,7 @@ paths = {
   sprites: {
     source: "assets/img/svg",
     build: "_includes/svg"
-  }, 
+  },
   css: {
     source: "_site/assets/css/all.css",
     build: "_site/assets/css/"
@@ -60,10 +60,10 @@ gulp.task('browser-sync', ['build-sequence'], function() {
     browserSync({
         server: {
             baseDir: '_site'
-        }, 
-        open: false, 
-		port: 4000, 
-		xip: true, 
+        },
+        open: false,
+		port: 4000,
+		xip: false, 
 		logSnippet: true
     });
 });
