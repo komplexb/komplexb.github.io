@@ -1,4 +1,23 @@
 projects:
+  cantilever:
+    name: Cantilever
+    file: 'index.html'
+    thumb: 'png'
+    title: Cantilever
+    site-url: http://cantilever.com
+    role: Front-end Developer
+    engagement-type: Company
+    engagement: Cantilever Web Design & Development
+    tenure: 2017
+    stack: Expression Engine, Shopify, Craft CMS
+    sites:
+      - title: Fizzics
+        url: http://store.fizzics.com/
+        image: fizzics.png
+      - title: Handi-Lift
+        url: http://handi-lift.com
+        image: handi-lift.png
+
   notifyer:
     name: Notifyer
     file: 'index.html'
