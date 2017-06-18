@@ -53,7 +53,7 @@ var a11yclick = function(event) {
 
 function ariaWorkBelt() {
   /*
-   * set images links as role=button 
+   * set images links as role=button
    * which will fallback to links if there is no JS
    */
   var workItems = {
@@ -69,7 +69,7 @@ function workBelt() {
   $('.thumb-container .thumb-unit-wrap').on("click keydown", function(e) {
     e.preventDefault();
   	$this = $(this);
-    
+
 	if(a11yclick(e)) {
 
 		$('.work-belt').addClass("slided");
@@ -78,7 +78,7 @@ function workBelt() {
 		});
 	}
   });
-  
+
   $('.work-return').click(function() {
     $('.work-belt').removeClass("slided");
     $('.work-container').hide(800, function() {
@@ -90,40 +90,42 @@ function workBelt() {
 }
 
 function workLoad($this) {
-  
+
     $.ajaxSetup({ cache: true });
-  
+
     var newTitle = $this.find('strong').text(),
         spinner = '<div class="loader">Loading...</div>',
         href = $this.attr("href"),
         newHTML = href.substr(0, href.indexOf("/page") + 1);
-      
+
     $('.project-load').html(spinner).load(newHTML, function() {
       $this.attr("aria-expanded", "true");
       $(".work-wrap").attr("aria-hidden", "false");
       $('.project-title').text(newTitle)
         .attr('aria-label', 'Project or Engagement details: ' + newTitle).focus();
+
+      cssSlidy();
     });
 }
 
 function clientStuff() {
-	
+
 	$('.client-logo, .clients-mobile-nav span').click(function() {
 		var $this = $(this),
 			$siblings = $this.parent().children(),
 			position = $siblings.index($this);
-		
+
 		$('.client-unit').removeClass('active-client').eq(position).addClass('active-client');
 		$siblings.removeClass('active-client');
 		$this.addClass('active-client');
 	});
-	
+
 	$('.client-control-next, .client-control-prev').click(function() {
 		var $this = $(this),
 			curActiveClient = $('.clients-belt').find('.active-client'),
 			position = $('.clients-belt').children().index(curActiveClient),
 			clientNum = $('.client-unit').length;
-		
+
 		if($this.hasClass('client-control-next')) {
 			if(position < clientNum - 1) {
 				$('.active-client').removeClass('active-client').next().addClass('active-client');
