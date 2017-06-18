@@ -1,5 +1,5 @@
 ---
 layout: work-detail
-title: Leerink Summit
+title: The Hero Company
 ---
 {% include_relative index.md %}

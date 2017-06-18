@@ -15,7 +15,7 @@ gravatar_alternate: komplexxx@gmail.com
 title: Byron Buckley
 email: hello@byronbuckley.com
 description: Front-end Developer
-alt-description: Currently available for Front-end Developer or Junior UX Designer roles 
+alt-description: Currently available for Front-end Developer or Junior UX Designer roles
 hired: true
 # site default images and content are defined in all.sass
 
@@ -72,13 +72,12 @@ clients:
   title: 'VP of Helmut, Lorem Sorem LLC.',
   quote: '<p><strong>Litteris quem et nescius concursionibus.</strong> Sed hic illum expetendis o incididunt dolore laboris. Est o magna excepteur ea te varias commodo occaecat.</p>',
   logo: 'logo4.png'}
-  
+
 #-------------------------------
 # Contact Section
 
 social:
 - {icon: 'twitter', link: 'twitter.com/komplexb', platform: 'Twitter'}
-- {icon: 'bitbucket', link: 'bitbucket.org/komplexb', platform: 'Bitbucket'}
 - {icon: 'github', link: 'github.com/komplexb', platform: 'GitHub'}
 - {icon: 'linkedin', link: 'jm.linkedin.com/in/byronbuckley', platform: 'LinkedIn'}
 - {icon: 'flickr', link: 'photos.byronbuckley.com', platform: 'Flickr'}

@@ -1,16 +1,17 @@
 <section class="section-work">
-  
+
   <h3 id="work" aria-level="2">Work</h3>
 
   <div class="work-belt">
-    
+
     <div class="thumb-wrap">
       <div class="thumb-container">
         {% for project_hash in site.data.work.projects %}
+        {% assign project_handle = project_hash[0] %}
         {% assign project = project_hash[1] %}
-        <a class="thumb-unit-wrap" href="/work/{{project.folder}}/page" aria-label="{{ project.engagement-type }}: {{ project.name }}; Tenure: {{ project.tenure | replace: '-','to' }}">  
-          <div class="thumb-unit">
-            <img src="/assets/img/work/{{project.folder}}/thumb.{{project.thumb}}" alt="" />
+        <a class="thumb-unit-wrap" href="/work/{{project_handle}}/page" aria-label="{{ project.engagement-type }}: {{ project.name }}; Tenure: {{ project.tenure | replace: '-','to' }}">
+          <div class="thumb-unit thumb-unit--markup thumb-unit--{{ project_handle }}">
+            <img src="/assets/img/work/{{project_handle}}/thumb.{{project.thumb}}" alt="" />
             <span aria-hidden="true">{{ project.tenure }}</span>
           </div>
           <div class="thumb-overlay">
@@ -20,7 +21,7 @@
         {% endfor %}
       </div>
     </div>
-    
+
     <div class="work-wrap" aria-hidden="true" id="work-item-details">
       <div class="work-container">
         <button aria-label="Go Back to Works List" class="work-return">
@@ -33,6 +34,6 @@
         <div class="project-load"></div>
       </div>
     </div>
-    
+
   </div>
 </section>

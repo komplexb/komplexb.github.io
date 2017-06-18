@@ -2,14 +2,14 @@
 	text-align: center
 	background-color: $bgcolor
 	margin-top: 100px
-	
+
 .social-links
 	max-width: 700px
 	margin: 0px auto 50px
-	+display(flex)
-	+justify-content(space-around)
-	+flex-wrap(wrap)
-	
+	display: flex
+	justify-content: space-around
+	flex-wrap: wrap
+
 	a
 		display: block
 		background: $accent
@@ -24,10 +24,10 @@
 
 		&:hover
 			+transform(scale(1.2))
-	
+
 		i
 			line-height: 50px
-		
+
 .bar
 	width: 250px
 	height: 0px
@@ -36,7 +36,7 @@
 
 .biglink
 	display: inline-block
-	font: 
+	font:
 		size: 72px
 		weight: 300
 	line-height: 1

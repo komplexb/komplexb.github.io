@@ -1,7 +1,6 @@
 projects:
-  notifyer: 
+  notifyer:
     name: Notifyer
-    folder: 'notifyer'
     file: 'index.html'
     thumb: 'png'
     title: Notifyer
@@ -11,10 +10,9 @@ projects:
     engagement: Side Project
     stack: JavaScript, Electron, VueJS
     tenure: 'Q4 2016'
-    
-  theheroco: 
+
+  theheroco:
     name: The Hero Co
-    folder: 'theheroco'
     file: 'index.html'
     thumb: 'jpg'
     title: The Hero Co
@@ -24,36 +22,26 @@ projects:
     engagement: The Hero Co; a digital marketing company
     tenure: 2015 - 2016
     stack: PHP
-    
-  solemates: 
-    name: Solemates
-    folder: 'solemates'
+
+  krafted:
+    name: Krafted By Us
     file: 'index.html'
-    thumb: 'jpg'
-    title: Solemates
-    site-url: http://thesolemates.com
+    thumb: 'png'
+    title: Krafted By Us
+    site-url: http://kraftedby.us
     role: Front-end Developer
-    engagement-type: Project
+    engagement-type: Company
     engagement: Krafted By Us; a Bay Area Web Studio
     tenure: Q2 2015
-    stack: Expression Engine
-    
-  genova: 
-    name: Genova Seafood
-    folder: 'genova'
-    file: 'index.html'
-    thumb: 'jpg'
-    title: Genova Seafood
-    site-url: http://genovaseafood.com
-    role: Front-end Developer
-    engagement-type: Project
-    engagement: Krafted By Us; a Bay Area Web Studio
-    tenure: Q2 2015
-    stack: Craft CMS
-    
-  medullan: 
+    stack: Expression Engine, Craft CMS
+    sites:
+      - title: Solemates
+        url: http://thesolemates.com/
+      - title: Genova Homepage
+        url: http://genovaseafood.com
+
+  medullan:
     name: Medullan
-    folder: 'medullan'
     file: 'index.html'
     thumb: 'png'
     title: Medullan
@@ -63,9 +51,8 @@ projects:
     engagement: Medullan; a digital healthcare consulting firm headquartered in Massachusetts, USA.
     tenure: 2014 - 2015
 
-  realdecoy: 
+  realdecoy:
     name: RealDecoy
-    folder: 'realdecoy'
     file: 'index.html'
     thumb: 'png'
     title: RealDecoy
@@ -75,5 +62,5 @@ projects:
     engagement-type: Company
     engagement: RealDecoy; a global CX applications company delivering Commerce & Data Insight solutions. They are headquartered in Ottawa, CA.
     tenure: 2011 - 2014
- 
+
 base: '/work/'
