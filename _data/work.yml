@@ -37,8 +37,10 @@ projects:
     sites:
       - title: Solemates
         url: http://thesolemates.com/
-      - title: Genova Homepage
+        image: solemates.jpg
+      - title: Genova Seafood
         url: http://genovaseafood.com
+        image: genova.jpg
 
   medullan:
     name: Medullan

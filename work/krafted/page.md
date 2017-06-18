@@ -1,5 +1,5 @@
 ---
 layout: work-detail
-title: The Hero Company
+title: Krafted By Us
 ---
 {% include_relative index.md %}
