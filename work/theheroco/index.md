@@ -18,6 +18,6 @@ View Websites:
   <li><a href="http://www.thetencode.com/d00_course_main-1312448/" title="Visit The Ten Code" target="_blank" rel="external">The Ten Code</a></li>
 </ul>
 <hr/>
-Engagement: {{ project.engagement }}  
+Engagement: <a href="{{ project.site-url }}" title="Visit {{ project.name }}" target="_blank" rel="external">{{ project.engagement }}</a>  
 Role: {{ project.role }}  
 Stack: {{ project.stack }}

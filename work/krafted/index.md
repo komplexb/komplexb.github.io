@@ -22,6 +22,6 @@
   </ul>
 </div>
 <hr/>
-Engagement: {{ project.engagement }}  
+Engagement: <a href="{{ project.site-url }}" title="Visit {{ project.name }}" target="_blank" rel="external">{{ project.engagement }}</a>  
 Role: {{ project.role }}  
 Stack: {{ project.stack }}

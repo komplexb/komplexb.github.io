@@ -12,6 +12,6 @@ I was also tasked with equipping a few back-end developers with basic front-end 
 <br>
 <a href="{{ project.site-url }}" title="Visit {{ project.title }}" target="_blank" rel="external">Visit {{ project.title }}</a>
 <hr/>
-Engagement: {{ project.engagement }}  
+Engagement: <a href="{{ project.site-url }}" title="Visit {{ project.name }}" target="_blank" rel="external">{{ project.engagement }}</a>  
 Role: {{ project.role }}  
 Tenure: {{ project.tenure }}
