@@ -1,16 +1,35 @@
 byronbuckley.com
 ================
 
-This starts out as the [Artists-Theme for Jekyll][]. I then added [Gulp][] and tweaked the gulpfile to leave SASS compiling to [Jekyll][]. I also added svg spriting, and the ability to deploy to gh-pages. 
+## Pre-requisites
+- Homebrew
+- Ruby
+- Jekyll
+- Node 8
 
-##Next Steps##
-Add an option to deploy to [surge.sh][] with Gulp.
+## Get Started
+Install [Jekyll][3]
 
-##Credits##
-- [How to build a responsive website from start to finish with Jekyll - DevTips](https://www.youtube.com/playlist?list=PLqGj3iMvMa4KQZUkRjfwMmTq_f1fbxerI)
-- https://github.com/shakyShane/jekyll-gulp-sass-browser-sync
+Installation issues? Try
+- Updating [Jekyll][5],
+- This [Gist][4]
 
-[Artists-Theme for Jekyll]: https://www.youtube.com/playlist?list=PLqGj3iMvMa4KQZUkRjfwMmTq_f1fbxerI
-[Gulp]: https://github.com/shakyShane/jekyll-gulp-sass-browser-sync "A starter project including full setup for Jekyll, GulpJS, SASS, AutoPrefixer & BrowserSync"
-[surge.sh]: www.surge.sh
-[Jekyll]: http://jekyllrb.com/
+## Run
+```
+# install dev dependencies
+npm i
+
+# dev
+npm run dev
+```
+
+## Credits
+- [How to build a responsive website from start to finish with Jekyll - DevTips][1]
+- [Artists-Theme for Jekyll][2]
+
+
+[1]: https://www.youtube.com/playlist?list=PLqGj3iMvMa4KQZUkRjfwMmTq_f1fbxerI
+[2]: https://www.youtube.com/playlist?list=PLqGj3iMvMa4KQZUkRjfwMmTq_f1fbxerI
+[3]: https://jekyllrb.com/docs/installation/macos/
+[4]: https://gist.github.com/petdance/a121efa4e1ca8d1a8c371c91b9529574
+[5]: https://www.iosdevlog.com/2020-12-01-update-jekyll/

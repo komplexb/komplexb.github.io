@@ -17,7 +17,7 @@
     "gulp-ext-replace": "^0.2.0",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^0.7.3",
+    "gulp-sass": "^4.1.0",
     "gulp-svg-sprite": "^1.2.8"
   },
   "repository": {
