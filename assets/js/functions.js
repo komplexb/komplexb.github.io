@@ -75,17 +75,19 @@ function ariaWorkBelt () {
 
 function workBelt () {
   var $this
-  $('.thumb-container .thumb-unit-wrap').on('click keydown', function (e) {
-    e.preventDefault()
-    $this = $(this)
+  $('.thumb-container .thumb-unit-wrap')
+    .not('.is-link')
+    .on('click keydown', function (e) {
+      e.preventDefault()
+      $this = $(this)
 
-    if (a11yclick(e)) {
-      $('.work-belt').addClass('slided')
-      $('.work-container').show(function () {
-        workLoad($this)
-      })
-    }
-  })
+      if (a11yclick(e)) {
+        $('.work-belt').addClass('slided')
+        $('.work-container').show(function () {
+          workLoad($this)
+        })
+      }
+    })
 
   $('.work-return').click(function () {
     $('.work-belt').removeClass('slided')

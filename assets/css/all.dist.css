@@ -2873,7 +2873,7 @@ footer nav a:focus::after {
   width: 100%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
   footer {
     background-position: right;
     justify-content: flex-end;
@@ -3138,6 +3138,7 @@ h3 + .work__detail {
     width: 50%;
   }
 }
+
 .thumb-container .thumb-unit-wrap {
   position: relative;
   display: block;
