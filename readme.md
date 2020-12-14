@@ -1,7 +1,20 @@
-## Credits
+# blog
 
-- [How to build a responsive website from start to finish with Jekyll - DevTips][1]
-- [Resume Icon][3]
+## Build Setup
 
-[1]: https://www.youtube.com/playlist?list=PLqGj3iMvMa4KQZUkRjfwMmTq_f1fbxerI
-[3]: https://dribbble.com/shots/10147361-CV-Resume-icon
+```bash
+# install dependencies
+$ npm install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm run start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
