@@ -4,22 +4,81 @@ description: "Overview of Vue Experience"
 hidden: true
 ---
 
-## Dynamic Page Generation & Routing
-<script src="https://gist.github.com/komplexb/5f10889b21f5d6c08c207dabacf791cd.js"></script>
+# Koala
+## Component Development
+### Dynamic Page Generation & Routing
+<script src="https://gist.github.com/komplexb/f1cb95305a424d9550fd1c2cee0cd618.js"></script>
 
-## Nuxt Config
-<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/nuxt.config.js?footer=minimal&slice=92:173">
+### Product Selector
+<script src="https://gist.github.com/komplexb/7150102de9ae0f79cccbdfc4ac0c0260.js"></script>
+
+## Working with Vuex 
+### Mutation Subscriptions
+<script src="https://gist.github.com/komplexb/68df0ab14af5775a1b568d7eeaba5583.js"></script>
+
+### Working with Sale Collections
+<script src="https://gist.github.com/komplexb/ec1c8ff2b6814cefd6a8dae108ef8470.js"></script>
+
+
+## Working with Jest
+<script src="https://gist.github.com/komplexb/017d0eaeb631d7fd3633f51de664cda8.js"></script>
+
+
+# Moovle
+[View Repo](https://github.com/komplexb/moovle/tree/feature/auth)
+
+## Role Based Auth in Nuxt (Client & Server Side)
+Configure PassportJS for authenticating users, and authorizing api routes with credentials/token based scheme for JWT flow.
+[View Source](https://github.com/komplexb/moovle/tree/feature/auth/api).
+
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/controllers/authentication.controller.js?footer=minimal">
 </script>
 
-## Product Form
+Configure Nuxt Auth[^1]
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/nuxt.config.js?footer=minimal&slice=91:137">
+</script>
 
-## Authentication & Authorization
+Create routes used above in nuxt.config.js
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/routes/authentication.js?footer=minimal">
+</script>
 
-## Slots (Post Code Widget)
+### Authorized users
+Prevent component from being loaded by unauthorized users.
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/pages/character/_id.vue?footer=minimal&slice=46:56">
+</script>
 
-## Help Page
-## Hooks
+Use `passport.authenticate` middleware to prevent unauthorized access to api route in the above component.
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/components/Comics.vue?footer=minimal&slice=51:66">
+</script>
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/routes/marvel.js?footer=minimal&slice=39:52">
+</script>
 
-## Vuex Mutation Subscriptions
+### Authorized users with Favourites scope
+Configure scope on the server.
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/controllers/authentication.controller.js?footer=minimal&slice=194:209">
+</script>
 
-## Vuex Sale Collections
+Configure scope within Nuxt.
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/middleware/scope.js?footer=minimal">
+</script>
+
+Create route that uses scope. Note access use of access control middlewares `favouritesScope` & `passport.authenticate`.
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/routes/favourites.js?footer=minimal">
+</script>
+
+Use scope within components.
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/components/layout/Header.vue?footer=minimal&slice=18:21">
+</script>
+
+Use scope as middleware to limit page access.
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/nuxt.config.js?footer=minimal&slice=142:149">
+</script>
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/pages/favourites.vue?footer=minimal&slice=44:64">
+</script>
+
+
+## E2E with Cypress
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/cypress/e2e/Index.spec.js?footer=minimal">
+</script>
+
+[^1]: [auth.nuxtjs.org](auth.nuxtjs.org)

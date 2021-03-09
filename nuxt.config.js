@@ -82,6 +82,7 @@ export default {
       prism: {
         theme: 'prism-themes/themes/prism-ghcolors.css',
       },
+      tocDepth: 2,
     },
   },
 
