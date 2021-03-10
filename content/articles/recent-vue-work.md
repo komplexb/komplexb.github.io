@@ -6,11 +6,21 @@ hidden: true
 
 # Koala
 ## Component Development
-### Dynamic Page Generation & Routing
-<script src="https://gist.github.com/komplexb/f1cb95305a424d9550fd1c2cee0cd618.js"></script>
-
 ### Product Selector
+The Product Selector was tasked with 'morphing' to display up to 4 configuration components in order to satisfy selection criteria for different product types based on CMS record config and product SKU details.
+
+![Product Form](/assets/blog/recent-vue-work/Product_Form_Annotated.png)
+- Image 1 - In it's simplest form the the component simply displayed the price and a CTA, and perhaps a size selector as seen in image 5.
+- Image 2 - A color swatch may be added as well, with optional tags such as **new**.
+- Image 3 - Size widget may be replaced with a checkbox that also supports tags such as **new** or **sale**.
+- Image 6 - Includes product, size as well as color swatches, and tags in various locations.
+- Image 4 - Created to support orientation and icon's in the dropdown, this variation supports up to 4 components, the code is displayed below.
+<br> 
 <script src="https://gist.github.com/komplexb/7150102de9ae0f79cccbdfc4ac0c0260.js"></script>
+
+### Dynamic Page Generation
+Use CMS API to populate Vue template and create routes. For an example of page output click [here](https://au.koala.com/products/koala-timber-bed-base).
+<script src="https://gist.github.com/komplexb/f1cb95305a424d9550fd1c2cee0cd618.js"></script>
 
 ## Working with Vuex 
 ### Mutation Subscriptions
