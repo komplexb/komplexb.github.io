@@ -20,7 +20,7 @@ The Product Selector was tasked with 'morphing' to display up to 4 configuration
 
 ### Dynamic Page Generation
 Use CMS API to populate Vue template and create routes. For an example of page output click [here](https://au.koala.com/products/koala-modern-sofa).
-<script defer src="https://gist.github.com/komplexb/f1cb95305a424d9550fd1c2cee0cd618.js"></script>
+<script async src="https://gist.github.com/komplexb/f1cb95305a424d9550fd1c2cee0cd618.js"></script>
 
 ## Working with Vuex 
 ### Mutation Subscriptions
@@ -28,7 +28,7 @@ Whenever discount codes are applied to the app state or removed from the app sta
 - validate discount code via Shopify
 - remove invalid discount codes from app state once validated 
 - apply the payload response of valid discount codes the app state. 
-<script defer src="https://gist.github.com/komplexb/68df0ab14af5775a1b568d7eeaba5583.js"></script>
+<script async src="https://gist.github.com/komplexb/68df0ab14af5775a1b568d7eeaba5583.js"></script>
 
 ### Working with Actions, Getters & Map Getters
 In the snippet below:
@@ -36,13 +36,13 @@ In the snippet below:
 - Format list and add contents to the discount state object. 
 - Create a getter to easily ascertain if a given product is on sale. 
 - Use getter as flag within components.
-<script defer src="https://gist.github.com/komplexb/ec1c8ff2b6814cefd6a8dae108ef8470.js"></script>
+<script async src="https://gist.github.com/komplexb/ec1c8ff2b6814cefd6a8dae108ef8470.js"></script>
 
 
 ## Working with Jest and Vue Test Utils
 - Use shallowMount to assist with assertions on color-selector component.
 - Mock app state to support shopping cart tests.
-<script defer src="https://gist.github.com/komplexb/017d0eaeb631d7fd3633f51de664cda8.js"></script>
+<script async src="https://gist.github.com/komplexb/017d0eaeb631d7fd3633f51de664cda8.js"></script>
 
 
 <h1>
@@ -61,58 +61,58 @@ The aim of this POC is to demonstrate capability in building a secure web app, a
 Configure PassportJS for authenticating users, and authorizing api routes with credentials/token based scheme for JWT flow.
 [View Source](https://github.com/komplexb/moovle/tree/feature/auth/api).
 
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/controllers/authentication.controller.js?footer=minimal">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/controllers/authentication.controller.js?footer=minimal">
 </script>
 
 Create user model in MongoDB 
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/models/user.js?footer=minimal">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/models/user.js?footer=minimal">
 </script>
 
 Configure Nuxt Auth[^1].
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/nuxt.config.js?footer=minimal&slice=91:137">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/nuxt.config.js?footer=minimal&slice=91:137">
 </script>
 
 Create routes used above in nuxt.config.js.
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/routes/authentication.js?footer=minimal">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/routes/authentication.js?footer=minimal">
 </script>
 
 ### Authorized users
 Prevent component from being loaded by unauthorized users.
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/pages/character/_id.vue?footer=minimal&slice=46:56">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/pages/character/_id.vue?footer=minimal&slice=46:56">
 </script>
 
 Use `passport.authenticate` middleware to prevent unauthorized access to api route in the above component.
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/components/Comics.vue?footer=minimal&slice=51:66">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/components/Comics.vue?footer=minimal&slice=51:66">
 </script>
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/routes/marvel.js?footer=minimal&slice=39:52">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/routes/marvel.js?footer=minimal&slice=39:52">
 </script>
 
 ### Authorized users with Favourites scope
 Configure scope on the server.
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/controllers/authentication.controller.js?footer=minimal&slice=194:209">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/controllers/authentication.controller.js?footer=minimal&slice=194:209">
 </script>
 
 Configure scope within Nuxt.
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/middleware/scope.js?footer=minimal">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/middleware/scope.js?footer=minimal">
 </script>
 
 Create route that uses scope. Note access use of access control middlewares `favouritesScope` & `passport.authenticate`.
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/routes/favourites.js?footer=minimal">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/routes/favourites.js?footer=minimal">
 </script>
 
 Use scope within components.
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/components/layout/Header.vue?footer=minimal&slice=18:21">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/components/layout/Header.vue?footer=minimal&slice=18:21">
 </script>
 
 Use scope as middleware to limit page access.
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/nuxt.config.js?footer=minimal&slice=142:149">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/nuxt.config.js?footer=minimal&slice=142:149">
 </script>
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/pages/favourites.vue?footer=minimal&slice=44:64">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/pages/favourites.vue?footer=minimal&slice=44:64">
 </script>
 
 
 ## E2E Testing with Cypress
-<script defer src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/cypress/e2e/Index.spec.js?footer=minimal">
+<script async src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/cypress/e2e/Index.spec.js?footer=minimal">
 </script>
 
 [^1]: [auth.nuxtjs.org](https://auth.nuxtjs.org)
