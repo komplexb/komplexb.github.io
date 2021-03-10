@@ -21,23 +21,23 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Experienced Front-end Engineer available for full-time and contract-to-hire engagements.'
+          'Experienced Front-end Engineer available for full-time and contract-to-hire engagements.',
       },
       {
         hid: 'keywords',
         name: 'keywords',
         content:
-          'css, scss, sass, javascript, vue, vuejs, ui, ux, front-end, developer, engineer, usability, electron, aws, serverless'
-      }
+          'css, scss, sass, javascript, vue, vuejs, ui, ux, front-end, developer, engineer, usability, electron, aws, serverless',
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/svg', href: '/assets/img/svg/logo.svg' },
       {
         hid: 'canonical',
         rel: 'canonical',
-        href: 'https://byronbuckley.com'
-      }
-    ]
+        href: 'https://byronbuckley.com',
+      },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -59,9 +59,9 @@ export default {
     [
       '@nuxtjs/google-analytics',
       {
-        id: 'UA-22514080-1'
-      }
-    ]
+        id: 'UA-22514080-1',
+      },
+    ],
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -70,7 +70,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -80,27 +80,21 @@ export default {
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-ghcolors.css'
-      }
-    }
+        theme: 'prism-themes/themes/prism-ghcolors.css',
+      },
+      tocDepth: 2,
+    },
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    extractCSS: true // prevents all.dist.css from being bundled into blog pages
+    extractCSS: true, // prevents all.dist.css from being bundled into blog pages
   },
 
   sitemap: {
     hostname: 'https://byronbuckley.com',
-    routes () {
+    routes() {
       return getRoutes()
-    }
-  }
-
-  // https://tailwindcss.nuxtjs.org/tailwind-config
-  /* tailwindcss: {
-    config: {
-      plugins: [tailwindTypography]
-    }
-  } */
+    },
+  },
 }
