@@ -1,0 +1,320 @@
+﻿$axure.loadCurrentPage({
+  "url":"login_1.html",
+  "generationDate":new Date(1376533203702.61),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable",
+"AxStWidget",
+"AxStXPosition",
+"DroplistOption"],
+  "page":{
+    "packageId":"9c3c421fb0654559b637ea9e6b9cae29",
+    "type":"Axure:Page",
+    "name":"Login",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"",
+      "sketchFactor":"25",
+      "colorStyle":"appliedColor",
+      "fontName":"Applied Font",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"973e6163d245456f835944d119ecc025",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":11.1999969482422,
+              "y":10},
+            "size":{
+              "width":306,
+              "height":265}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"cb26b3b221734cf1afa72c5ebaf3ad21",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":11.1999969482422,
+                  "y":10},
+                "size":{
+                  "width":306,
+                  "height":265}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/login/u0.png"}},
+{
+          "id":"14f060386eed43fbb2bf1a754e340d17",
+          "label":"",
+          "type":"textBox",
+          "styleType":"textBox",
+          "visible":true,
+          "style":{
+            "horizontalAlignment":"center",
+            "location":{
+              "x":74.1999969482422,
+              "y":87},
+            "size":{
+              "width":180,
+              "height":25}},
+          "adaptiveStyles":{
+}},
+{
+          "id":"52fc882a73c447e8a1efb35bb7244993",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "underline":true,
+            "horizontalAlignment":"center",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF0000FF,
+              "opacity":1},
+            "location":{
+              "x":291,
+              "y":251},
+            "size":{
+              "width":15,
+              "height":15}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"f6dfcbb6bcba47ba86aa6a5744bebba5",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "underline":true,
+                "horizontalAlignment":"center",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF0000FF,
+                  "opacity":1},
+                "location":{
+                  "x":291,
+                  "y":251},
+                "size":{
+                  "width":15,
+                  "height":15}},
+              "adaptiveStyles":{
+}}],
+          "annotation":{
+            "Description":"Contextual Help"},
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"e396e3a410db4a41a1b1fd9d8d3b54eb",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseOver":{
+                "fontWeight":"bold"}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFF00CC66},
+            "location":{
+              "x":114,
+              "y":134.800003051758},
+            "size":{
+              "width":100,
+              "height":40}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"74f6eebd76b641aaa55bfecf17dc0b17",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseOver":{
+                    "fontWeight":"bold"}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF00CC66},
+                "location":{
+                  "x":114,
+                  "y":134.800003051758},
+                "size":{
+                  "width":100,
+                  "height":40}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open Dashboard in Current Window",
+                      "target":{
+                        "targetType":"page",
+                        "url":"dashboard.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "annotation":{
+            "Description":"Authenticate with Simplenote API"},
+          "images":{
+            "normal~":"images/login/u6.png",
+            "mouseOver~":"images/login/u6.png"}},
+{
+          "id":"07df719b75854ea981679eeaae74939e",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseOver":{
+                "fontWeight":"bold"}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFF0099FF},
+            "location":{
+              "x":114,
+              "y":185},
+            "size":{
+              "width":100,
+              "height":40}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"0d2a5184e07242c7ba1709f29befb984",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseOver":{
+                    "fontWeight":"bold"}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF0099FF},
+                "location":{
+                  "x":114,
+                  "y":185},
+                "size":{
+                  "width":100,
+                  "height":40}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"Case 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"Open https://simple-note.appspot.com/forgot/ in Current Window",
+                      "target":{
+                        "targetType":"webUrl",
+                        "urlLiteral":{
+                          "exprType":"stringLiteral",
+                          "value":"https://simple-note.appspot.com/forgot/",
+                          "stos":[]},
+                        "includeVariables":false},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "annotation":{
+            "Description":"Opens Simplenote &quot;Forgot Password&quot; page in a new window."},
+          "images":{
+            "normal~":"images/login/u8.png",
+            "mouseOver~":"images/login/u8.png"}},
+{
+          "id":"439e76877139417cb1894ba426535a75",
+          "label":"",
+          "type":"textBox",
+          "styleType":"textBox",
+          "visible":true,
+          "style":{
+            "horizontalAlignment":"center",
+            "stateStyles":{
+              "hint":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF999999,
+                  "opacity":1}}},
+            "location":{
+              "x":74.1999969482422,
+              "y":43},
+            "size":{
+              "width":180,
+              "height":25}},
+          "adaptiveStyles":{
+},
+          "placeholderText":"username"}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "973e6163d245456f835944d119ecc025":{
+      "scriptId":"u0"},
+    "cb26b3b221734cf1afa72c5ebaf3ad21":{
+      "scriptId":"u1"},
+    "14f060386eed43fbb2bf1a754e340d17":{
+      "scriptId":"u2"},
+    "52fc882a73c447e8a1efb35bb7244993":{
+      "scriptId":"u3"},
+    "f6dfcbb6bcba47ba86aa6a5744bebba5":{
+      "scriptId":"u4"},
+    "e396e3a410db4a41a1b1fd9d8d3b54eb":{
+      "scriptId":"u5"},
+    "74f6eebd76b641aaa55bfecf17dc0b17":{
+      "scriptId":"u6"},
+    "07df719b75854ea981679eeaae74939e":{
+      "scriptId":"u7"},
+    "0d2a5184e07242c7ba1709f29befb984":{
+      "scriptId":"u8"},
+    "439e76877139417cb1894ba426535a75":{
+      "scriptId":"u9"}}});
