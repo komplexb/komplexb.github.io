@@ -24,15 +24,18 @@ Use CMS API to populate Vue template and create routes. For an example of page o
 
 ## Working with Vuex 
 ### Mutation Subscriptions
-Whenever discount codes are applied to the app state or removed from the app state, the source of truth (Shopify) to ensure the cart totals are correct. I used mutation subscriptions[^2] to check update Shopify as necessary and apply the updated payload to the appstate. 
+Whenever discount codes are applied to the app state or removed from the app state, the source of truth (Shopify) to ensure the cart totals are correct. I used mutation subscriptions[^2] to:
+- validate discount code via Shopify
+- remove invalid discount codes from app state once validated 
+- apply the payload response of valid discount codes the app state. 
 <script src="https://gist.github.com/komplexb/68df0ab14af5775a1b568d7eeaba5583.js"></script>
 
 ### Working with Actions, Getters & Map Getters
 In the snippet below:
-- Fetch a list of products on sale from Shopify
-- Transform them and add them to the discount state object. 
+- Fetch a list of products on sale from Shopify.
+- Format list and add contents to the discount state object. 
 - Create a getter to easily ascertain if a given product is on sale. 
-- Access getter within components to determine applicable behavior.
+- Use getter as flag within components.
 <script src="https://gist.github.com/komplexb/ec1c8ff2b6814cefd6a8dae108ef8470.js"></script>
 
 
@@ -61,11 +64,11 @@ Configure PassportJS for authenticating users, and authorizing api routes with c
 <script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/controllers/authentication.controller.js?footer=minimal">
 </script>
 
-Configure Nuxt Auth[^1]
+Configure Nuxt Auth[^1].
 <script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/nuxt.config.js?footer=minimal&slice=91:137">
 </script>
 
-Create routes used above in nuxt.config.js
+Create routes used above in nuxt.config.js.
 <script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/routes/authentication.js?footer=minimal">
 </script>
 
