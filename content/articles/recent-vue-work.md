@@ -19,7 +19,7 @@ The Product Selector was tasked with 'morphing' to display up to 4 configuration
 <script src="https://gist.github.com/komplexb/7150102de9ae0f79cccbdfc4ac0c0260.js"></script>
 
 ### Dynamic Page Generation
-Use CMS API to populate Vue template and create routes. For an example of page output click [here](https://au.koala.com/products/koala-timber-bed-base).
+Use CMS API to populate Vue template and create routes. For an example of page output click [here](https://au.koala.com/products/koala-modern-sofa).
 <script src="https://gist.github.com/komplexb/f1cb95305a424d9550fd1c2cee0cd618.js"></script>
 
 ## Working with Vuex 
@@ -104,9 +104,9 @@ Use scope as middleware to limit page access.
 </script>
 
 
-## E2E with Cypress
+## E2E Testing with Cypress
 <script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/cypress/e2e/Index.spec.js?footer=minimal">
 </script>
 
-[^1]: [auth.nuxtjs.org](auth.nuxtjs.org)
+[^1]: [auth.nuxtjs.org](https://auth.nuxtjs.org)
 [^2]: [Vuex Plugins](https://vuex.vuejs.org/guide/plugins.html#plugins)
