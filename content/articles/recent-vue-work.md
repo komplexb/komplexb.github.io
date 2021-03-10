@@ -57,11 +57,15 @@ The aim of this POC is to demonstrate capability in building a secure web app, a
 - PassportJS on an Express server implemented at [/api](https://github.com/komplexb/moovle/tree/feature/auth/api)
 
 
-## Role Based Auth in Nuxt (Client & Server Side)
+## Role Based Auth in Nuxt (Client and Server Side)
 Configure PassportJS for authenticating users, and authorizing api routes with credentials/token based scheme for JWT flow.
 [View Source](https://github.com/komplexb/moovle/tree/feature/auth/api).
 
 <script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/controllers/authentication.controller.js?footer=minimal">
+</script>
+
+Create user model in MongoDB 
+<script src="https://gist-it.appspot.com/https://github.com/komplexb/moovle/blob/feature/auth/api/models/user.js?footer=minimal">
 </script>
 
 Configure Nuxt Auth[^1].
