@@ -14,7 +14,7 @@ The Product Selector was tasked with 'morphing' to display up to 4 configuration
 - Image 2 - A color swatch may be added as well, with optional tags such as **new**.
 - Image 3 - Size widget may be replaced with a checkbox that also supports tags such as **new** or **sale**.
 - Image 6 - Includes product, size as well as color swatches, and tags in various locations.
-- Image 4 - Created to support orientation and icon's in the dropdown, this variation supports up to 4 components, the code is displayed below.
+- Image 4 - Created to support orientation and icon's in the dropdown, this variation supports up to 4 components. The code (displayed below) was extended from existing components to support product & style variations, icons on style dropdowns, and orientation toggles.
 <br> 
 <script src="https://gist.github.com/komplexb/7150102de9ae0f79cccbdfc4ac0c0260.js"></script>
 
@@ -24,18 +24,35 @@ Use CMS API to populate Vue template and create routes. For an example of page o
 
 ## Working with Vuex 
 ### Mutation Subscriptions
+Whenever discount codes are applied to the app state or removed from the app state, the source of truth (Shopify) to ensure the cart totals are correct. I used mutation subscriptions[^2] to check update Shopify as necessary and apply the updated payload to the appstate. 
 <script src="https://gist.github.com/komplexb/68df0ab14af5775a1b568d7eeaba5583.js"></script>
 
-### Working with Sale Collections
+### Working with Actions, Getters & Map Getters
+In the snippet below:
+- Fetch a list of products on sale from Shopify
+- Transform them and add them to the discount state object. 
+- Create a getter to easily ascertain if a given product is on sale. 
+- Access getter within components to determine applicable behavior.
 <script src="https://gist.github.com/komplexb/ec1c8ff2b6814cefd6a8dae108ef8470.js"></script>
 
 
-## Working with Jest
+## Working with Jest and Vue Test Utils
+- Use shallowMount to assist with assertions on color-selector component.
+- Mock app state to support shopping cart tests.
 <script src="https://gist.github.com/komplexb/017d0eaeb631d7fd3633f51de664cda8.js"></script>
 
 
-# Moovle
-[View Repo](https://github.com/komplexb/moovle/tree/feature/auth)
+<h1>
+  Moovle
+  <small>
+    (<a href="https://github.com/komplexb/moovle/tree/feature/auth" target="_blank">see repo</a>)
+  </small>
+</h1>
+
+The aim of this POC is to demonstrate capability in building a secure web app, as well awareness of the various considerations. It leverages:
+- nuxt-auth local strategy which is the default, credentials/token based scheme for flows using JWT.
+- PassportJS on an Express server implemented at [/api](https://github.com/komplexb/moovle/tree/feature/auth/api)
+
 
 ## Role Based Auth in Nuxt (Client & Server Side)
 Configure PassportJS for authenticating users, and authorizing api routes with credentials/token based scheme for JWT flow.
@@ -92,3 +109,4 @@ Use scope as middleware to limit page access.
 </script>
 
 [^1]: [auth.nuxtjs.org](auth.nuxtjs.org)
+[^2]: [Vuex Plugins](https://vuex.vuejs.org/guide/plugins.html#plugins)
