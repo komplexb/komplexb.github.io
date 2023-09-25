@@ -1,0 +1,1 @@
+window.__NUXT__={staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1695680987",layout:"default",error:null,serverRendered:true,routePath:"\u002Fblog\u002Fusing-the-themecolor-meta-tag-to-set-the-mood-on-your-website",config:{content:{dbHash:"9a2e05aa"}}};
